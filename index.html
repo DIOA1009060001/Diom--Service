@@ -12,7 +12,7 @@
 
   <title>Diom Service | Création de sites internet</title>
 
-  <meta name="description" content="Diom Service crée des sites internet modernes et professionnels pour les entreprises et particuliers.">
+  <meta name="description" content="Diom Service crée des sites internet modernes et abordables pour les commerçants, entreprises et particuliers.">
 
   <style>
 
@@ -23,6 +23,12 @@
       padding: 0;
 
       box-sizing: border-box;
+
+    }
+
+    html {
+
+      scroll-behavior: smooth;
 
     }
 
@@ -66,6 +72,16 @@
 
     }
 
+    nav {
+
+      display: flex;
+
+      flex-wrap: wrap;
+
+      justify-content: center;
+
+    }
+
     nav a {
 
       color: white;
@@ -106,7 +122,9 @@
 
     .hero p {
 
-      margin-bottom: 30px;
+      max-width: 650px;
+
+      margin: 0 auto 30px;
 
     }
 
@@ -192,9 +210,29 @@
 
     }
 
+    .prix {
+
+      color: #087fba;
+
+      font-size: 25px;
+
+      font-weight: bold;
+
+      margin: 12px 0;
+
+    }
+
     .apropos {
 
       background: white;
+
+    }
+
+    .apropos p {
+
+      max-width: 750px;
+
+      margin: auto;
 
     }
 
@@ -210,6 +248,16 @@
 
     }
 
+    .note {
+
+      color: #5d6678;
+
+      font-size: 13px;
+
+      margin-top: 25px;
+
+    }
+
     footer {
 
       background: #101b35;
@@ -219,6 +267,12 @@
       text-align: center;
 
       padding: 25px;
+
+    }
+
+    footer p {
+
+      margin: 5px;
 
     }
 
@@ -244,6 +298,12 @@
 
       }
 
+      section {
+
+        padding: 50px 6%;
+
+      }
+
     }
 
   </style>
@@ -262,6 +322,8 @@
 
       <a href="#services">Services</a>
 
+      <a href="#tarifs">Tarifs</a>
+
       <a href="#apropos">À propos</a>
 
       <a href="#contact">Contact</a>
@@ -272,7 +334,7 @@
 
   <main>
 
-    <div class="hero" id="accueil">
+    <section class="hero" id="accueil">
 
       <h1>Bienvenue chez Diom Service</h1>
 
@@ -280,7 +342,9 @@
 
         Nous créons des sites internet modernes,
 
-        professionnels et adaptés à votre activité.
+        professionnels et accessibles pour les petits
+
+        commerçants, entreprises et particuliers.
 
       </p>
 
@@ -290,7 +354,13 @@
 
       </a>
 
-    </div>
+      <a href="#contact" class="btn">
+
+        Nous contacter
+
+      </a>
+
+    </section>
 
     <section id="services">
 
@@ -310,7 +380,13 @@
 
           <h3>Sites vitrines</h3>
 
-          <p>Présentez votre entreprise sur Internet.</p>
+          <p>
+
+            Présentez votre entreprise, vos activités
+
+            et vos coordonnées sur Internet.
+
+          </p>
 
         </div>
 
@@ -320,17 +396,29 @@
 
           <h3>Sites e-commerce</h3>
 
-          <p>Présentez vos produits et vendez en ligne.</p>
+          <p>
+
+            Présentez vos produits et permettez
+
+            à vos clients de passer commande.
+
+          </p>
 
         </div>
 
         <div class="carte">
 
-          <div class="emoji">🎨</div>
+          <div class="emoji">📦</div>
 
-          <h3>Design web</h3>
+          <h3>Catalogues produits</h3>
 
-          <p>Des interfaces modernes et agréables à utiliser.</p>
+          <p>
+
+            Affichez vos produits, vos photos
+
+            et vos prix en ligne.
+
+          </p>
 
         </div>
 
@@ -340,11 +428,115 @@
 
           <h3>Sites personnels</h3>
 
-          <p>Créez votre portfolio ou votre CV en ligne.</p>
+          <p>
+
+            Créez votre portfolio ou votre CV
+
+            professionnel sur Internet.
+
+          </p>
 
         </div>
 
       </div>
+
+    </section>
+
+    <section id="tarifs">
+
+      <h2>Nos tarifs</h2>
+
+      <p>
+
+        Des prestations accessibles pour les petits commerçants.
+
+      </p>
+
+      <div class="services">
+
+        <div class="carte">
+
+          <div class="emoji">🌍</div>
+
+          <h3>Mini-site</h3>
+
+          <div class="prix">5 000 F CFA</div>
+
+          <p>
+
+            Une page de présentation avec vos
+
+            informations et vos contacts.
+
+          </p>
+
+        </div>
+
+        <div class="carte">
+
+          <div class="emoji">🏪</div>
+
+          <h3>Site vitrine</h3>
+
+          <div class="prix">10 000 F CFA</div>
+
+          <p>
+
+            Présentation de votre commerce,
+
+            vos services et vos photos.
+
+          </p>
+
+        </div>
+
+        <div class="carte">
+
+          <div class="emoji">🛍️</div>
+
+          <h3>Catalogue produits</h3>
+
+          <div class="prix">12 000 F CFA</div>
+
+          <p>
+
+            Présentation de vos produits
+
+            avec photos et prix.
+
+          </p>
+
+        </div>
+
+        <div class="carte">
+
+          <div class="emoji">💳</div>
+
+          <h3>Site e-commerce</h3>
+
+          <div class="prix">20 000 F CFA</div>
+
+          <p>
+
+            Une boutique en ligne avec panier
+
+            et fonctionnalités de commande.
+
+          </p>
+
+        </div>
+
+      </div>
+
+      <p class="note">
+
+        Tarifs de lancement. Les frais de domaine,
+
+        d'hébergement et les fonctionnalités supplémentaires
+
+        sont à discuter séparément.
+
+      </p>
 
     </section>
 
@@ -354,13 +546,15 @@
 
       <p>
 
-        Diom Service est une agence spécialisée dans la
+        Diom Service est une agence de création de sites
 
-        création de sites internet. Notre objectif est
+        internet. Notre objectif est d'aider les petits
 
-        d'aider les entreprises, commerçants et particuliers
+        commerçants, les entreprises et les particuliers
 
-        à développer leur présence sur Internet.
+        à développer leur présence sur Internet grâce
+
+        à des solutions numériques accessibles.
 
       </p>
 
@@ -370,9 +564,13 @@
 
       <h2>Contactez Diom Service</h2>
 
-      <p>Vous avez un projet de site internet ?</p>
+      <p>
 
-      <p>Nous sommes à votre écoute.</p>
+        Vous avez un projet de site internet ?
+
+        Parlons-en ensemble !
+
+      </p>
 
       <br>
 
@@ -382,7 +580,7 @@
 
          target="_blank">
 
-        Nous contacter sur WhatsApp
+        Contacter sur WhatsApp
 
       </a>
 
@@ -392,7 +590,7 @@
 
          href="mailto:abdoulayediomande243@gmail.com">
 
-        Nous contacter par e-mail
+        Envoyer un e-mail
 
       </a>
 
@@ -400,7 +598,11 @@
 
       <p>WhatsApp : 05 64 36 95 43</p>
 
-      <p>Email : abdoulayediomande243@gmail.com</p>
+      <p>
+
+        Email : abdoulayediomande243@gmail.com
+
+      </p>
 
     </section>
 
