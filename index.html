@@ -10,7 +10,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Diom Service | Création de sites web</title>
+  <title>Diom Service | Agence Web</title>
 
   <style>
 
@@ -28,7 +28,7 @@
 
       font-family: Arial, sans-serif;
 
-      background: #f4f6fa;
+      background: #f5f7fc;
 
       color: #172033;
 
@@ -38,9 +38,7 @@
 
       background: #101b35;
 
-      color: white;
-
-      padding: 22px 7%;
+      padding: 20px 7%;
 
       display: flex;
 
@@ -48,11 +46,19 @@
 
       align-items: center;
 
+      flex-wrap: wrap;
+
+      gap: 15px;
+
     }
 
-    header h1 {
+    .logo {
 
-      color: #42c8ff;
+      color: #40c8ff;
+
+      font-size: 25px;
+
+      font-weight: bold;
 
     }
 
@@ -62,51 +68,53 @@
 
       text-decoration: none;
 
-      margin-left: 15px;
+      margin: 7px;
+
+      font-size: 14px;
 
     }
 
-    .accueil {
+    .hero {
 
-      text-align: center;
-
-      padding: 90px 20px;
-
-      background: #172b50;
+      background: linear-gradient(135deg, #101b35, #244d80);
 
       color: white;
 
+      text-align: center;
+
+      padding: 100px 20px;
+
     }
 
-    .accueil h2 {
+    .hero h1 {
 
-      font-size: 34px;
+      font-size: 38px;
 
       margin-bottom: 20px;
 
     }
 
-    .accueil p {
+    .hero p {
 
-      margin-bottom: 25px;
+      line-height: 1.7;
 
-      line-height: 1.6;
+      margin-bottom: 30px;
 
     }
 
-    .bouton {
+    .btn {
 
       display: inline-block;
 
-      background: #42c8ff;
+      background: #40c8ff;
 
       color: #101b35;
 
-      padding: 14px 24px;
-
-      text-decoration: none;
+      padding: 15px 25px;
 
       border-radius: 8px;
+
+      text-decoration: none;
 
       font-weight: bold;
 
@@ -114,9 +122,17 @@
 
     section {
 
-      padding: 55px 7%;
+      padding: 65px 7%;
 
       text-align: center;
+
+    }
+
+    section h2 {
+
+      font-size: 29px;
+
+      margin-bottom: 15px;
 
     }
 
@@ -126,9 +142,9 @@
 
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 
-      gap: 20px;
+      gap: 22px;
 
-      margin-top: 30px;
+      margin-top: 35px;
 
     }
 
@@ -136,19 +152,41 @@
 
       background: white;
 
-      padding: 25px;
+      padding: 30px 20px;
 
       border-radius: 12px;
 
-      box-shadow: 0 3px 12px #00000010;
+      box-shadow: 0 4px 15px #00000010;
+
+    }
+
+    .carte .emoji {
+
+      font-size: 38px;
+
+      margin-bottom: 15px;
 
     }
 
     .carte h3 {
 
+      color: #17365e;
+
       margin-bottom: 12px;
 
-      color: #172b50;
+    }
+
+    .apropos {
+
+      background: white;
+
+      line-height: 1.8;
+
+    }
+
+    .contact {
+
+      background: #eaf4ff;
 
     }
 
@@ -164,6 +202,30 @@
 
     }
 
+    @media (max-width: 600px) {
+
+      header {
+
+        justify-content: center;
+
+        text-align: center;
+
+      }
+
+      nav {
+
+        width: 100%;
+
+      }
+
+      .hero h1 {
+
+        font-size: 29px;
+
+      }
+
+    }
+
   </style>
 
 </head>
@@ -172,13 +234,15 @@
 
   <header>
 
-    <h1>Diom Service</h1>
+    <div class="logo">DIOM SERVICE</div>
 
     <nav>
 
       <a href="#accueil">Accueil</a>
 
       <a href="#services">Services</a>
+
+      <a href="#apropos">À propos</a>
 
       <a href="#contact">Contact</a>
 
@@ -188,19 +252,23 @@
 
   <main>
 
-    <div class="accueil" id="accueil">
+    <div class="hero" id="accueil">
 
-      <h2>Bienvenue chez Diom Service</h2>
+      <h1>Bienvenue chez Diom Service</h1>
 
       <p>
 
         Nous créons des sites internet modernes,
 
-        professionnels et adaptés à vos activités.
+        professionnels et adaptés à votre activité.
 
       </p>
 
-      <a href="#services" class="bouton">Découvrir nos services</a>
+      <a href="#services" class="btn">
+
+        Découvrir nos services
+
+      </a>
 
     </div>
 
@@ -208,29 +276,47 @@
 
       <h2>Nos services</h2>
 
+      <p>Des solutions numériques pour développer votre activité.</p>
+
       <div class="services">
 
         <div class="carte">
 
+          <div class="emoji">🌐</div>
+
           <h3>Sites vitrines</h3>
 
-          <p>Présentez votre entreprise sur Internet.</p>
+          <p>Présentez votre entreprise et vos activités sur Internet.</p>
 
         </div>
 
         <div class="carte">
+
+          <div class="emoji">🛒</div>
 
           <h3>Sites e-commerce</h3>
 
-          <p>Vendez vos produits en ligne.</p>
+          <p>Présentez vos produits et vendez en ligne.</p>
 
         </div>
 
         <div class="carte">
 
+          <div class="emoji">🎨</div>
+
           <h3>Design web</h3>
 
-          <p>Des sites modernes et agréables à utiliser.</p>
+          <p>Des interfaces modernes et agréables à utiliser.</p>
+
+        </div>
+
+        <div class="carte">
+
+          <div class="emoji">💻</div>
+
+          <h3>Sites personnels</h3>
+
+          <p>Créez votre portfolio ou votre CV en ligne.</p>
 
         </div>
 
@@ -238,13 +324,41 @@
 
     </section>
 
-    <section id="contact">
+    <section class="apropos" id="apropos">
 
-      <h2>Contactez-nous</h2>
+      <h2>À propos de Diom Service</h2>
 
-      <p>Vous avez un projet de site internet ?</p>
+      <p>
 
-      <p>Diom Service est à votre écoute.</p>
+        Diom Service est une agence spécialisée dans la
+
+        création de sites internet. Notre objectif est
+
+        d'aider les entreprises, commerçants et particuliers
+
+        à développer leur présence sur Internet.
+
+      </p>
+
+    </section>
+
+    <section class="contact" id="contact">
+
+      <h2>Un projet de site internet ?</h2>
+
+      <p>Contactez Diom Service pour discuter de votre projet.</p>
+
+      <br>
+
+      <a class="btn"
+
+         href="https://wa.me/225XXXXXXXXXX"
+
+         target="_blank">
+
+        Nous contacter sur WhatsApp
+
+      </a>
 
     </section>
 
@@ -253,6 +367,8 @@
   <footer>
 
     <p>© 2026 Diom Service - Tous droits réservés.</p>
+
+    <p>Création de sites internet</p>
 
   </footer>
 
