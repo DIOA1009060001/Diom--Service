@@ -14,57 +14,221 @@
 
 <meta name="description" content="Diom Service : création de sites web, logos, affiches publicitaires, CV et visuels numériques.">
 
+<meta name="theme-color" content="#071b3b">
+
+<!-- LOGO COMME ICÔNE DU SITE -->
+
+<link rel="icon" type="image/png" href="logo-diom-service.png.PNG">
+
+<link rel="apple-touch-icon" href="logo-diom-service.png.PNG">
+
 <style>
 
 *{margin:0;padding:0;box-sizing:border-box}
 
 html{scroll-behavior:smooth}
 
-body{font-family:Arial,sans-serif;background:#f5f8fc;color:#17233b;line-height:1.6}
+body{
 
-header{background:#071b3b;color:white;padding:14px 6%;display:flex;align-items:center;justify-content:space-between;gap:15px;flex-wrap:wrap}
+font-family:Arial,sans-serif;
 
-.brand{display:flex;align-items:center;gap:12px}
+background:#f5f8fc;
 
-.brand img{width:65px;height:65px;object-fit:contain;background:white;border-radius:10px}
+color:#17233b;
+
+line-height:1.6
+
+}
+
+header{
+
+background:#071b3b;
+
+color:white;
+
+padding:14px 6%;
+
+display:flex;
+
+align-items:center;
+
+justify-content:space-between;
+
+gap:15px;
+
+flex-wrap:wrap
+
+}
+
+.brand{
+
+display:flex;
+
+align-items:center;
+
+gap:12px
+
+}
 
 .brand h2{font-size:21px}
 
-nav{display:flex;gap:15px;flex-wrap:wrap}
+nav{
 
-nav a{color:white;text-decoration:none;font-size:14px;font-weight:bold}
+display:flex;
+
+gap:15px;
+
+flex-wrap:wrap
+
+}
+
+nav a{
+
+color:white;
+
+text-decoration:none;
+
+font-size:14px;
+
+font-weight:bold
+
+}
 
 nav a:hover{color:#26c6da}
 
-.hero{text-align:center;padding:75px 20px;background:linear-gradient(135deg,#071b3b,#0759a6);color:white}
+.hero{
+
+text-align:center;
+
+padding:75px 20px;
+
+background:linear-gradient(135deg,#071b3b,#0759a6);
+
+color:white
+
+}
 
 .hero h1{font-size:38px;margin-bottom:15px}
 
 .hero p{max-width:650px;margin:0 auto 25px}
 
-.btn{display:inline-block;background:#16c5df;color:#061a37;padding:12px 23px;border-radius:7px;text-decoration:none;font-weight:bold}
+.btn{
+
+display:inline-block;
+
+background:#16c5df;
+
+color:#061a37;
+
+padding:12px 23px;
+
+border-radius:7px;
+
+text-decoration:none;
+
+font-weight:bold
+
+}
 
 section{padding:55px 6%}
 
-.section-title{text-align:center;font-size:29px;color:#073c79;margin-bottom:30px}
+.section-title{
 
-.services,.portfolio{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+text-align:center;
 
-.card{background:white;padding:22px;border-radius:12px;box-shadow:0 4px 15px #071b3b12}
+font-size:29px;
+
+color:#073c79;
+
+margin-bottom:30px
+
+}
+
+.services,.portfolio{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+gap:20px
+
+}
+
+.card{
+
+background:white;
+
+padding:22px;
+
+border-radius:12px;
+
+box-shadow:0 4px 15px #071b3b12
+
+}
 
 .card h3{color:#0759a6;margin-bottom:9px}
 
-.price{color:#0786a7;font-weight:bold;margin-top:12px}
+.price{
+
+color:#0786a7;
+
+font-weight:bold;
+
+margin-top:12px
+
+}
 
 .portfolio .card{overflow:hidden}
 
-.portfolio img{width:100%;height:230px;object-fit:contain;background:#edf3fa;border-radius:9px;margin-bottom:12px}
+.portfolio img{
 
-.demo{height:230px;border-radius:9px;background:linear-gradient(135deg,#071b3b,#087fc0);display:flex;align-items:center;justify-content:center;text-align:center;color:white;padding:15px;margin-bottom:12px}
+width:100%;
+
+height:230px;
+
+object-fit:contain;
+
+background:#edf3fa;
+
+border-radius:9px;
+
+margin-bottom:12px
+
+}
+
+.demo{
+
+height:230px;
+
+border-radius:9px;
+
+background:linear-gradient(135deg,#071b3b,#087fc0);
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+text-align:center;
+
+color:white;
+
+padding:15px;
+
+margin-bottom:12px
+
+}
 
 .demo h3{color:white;font-size:25px}
 
-.about{text-align:center;background:#e9f3fc}
+.about{
+
+text-align:center;
+
+background:#e9f3fc
+
+}
 
 .about p{max-width:750px;margin:auto}
 
@@ -72,9 +236,25 @@ section{padding:55px 6%}
 
 .contact p{margin:10px}
 
-.contact a{color:#0759a6;font-weight:bold}
+.contact a{
 
-footer{text-align:center;background:#071b3b;color:white;padding:22px}
+color:#0759a6;
+
+font-weight:bold
+
+}
+
+footer{
+
+text-align:center;
+
+background:#071b3b;
+
+color:white;
+
+padding:22px
+
+}
 
 @media(max-width:600px){
 
@@ -99,8 +279,6 @@ section{padding:42px 5%}
 <header>
 
 <div class="brand">
-
-<img src="logo-diom-service.png.PNG" alt="Logo Diom Service">
 
 <h2>DIOM SERVICE</h2>
 
@@ -138,23 +316,95 @@ section{padding:42px 5%}
 
 <div class="services">
 
-<div class="card"><h3>Mini-site de présentation</h3><p>Une petite page pour présenter votre activité.</p><p class="price">5 000 FCFA</p></div>
+<div class="card">
 
-<div class="card"><h3>Site vitrine</h3><p>Présentez votre entreprise et vos services.</p><p class="price">10 000 FCFA</p></div>
+<h3>Mini-site de présentation</h3>
 
-<div class="card"><h3>Catalogue de produits</h3><p>Présentez vos articles avec photos et prix.</p><p class="price">12 000 FCFA</p></div>
+<p>Une petite page pour présenter votre activité.</p>
 
-<div class="card"><h3>Site e-commerce simple</h3><p>Une vitrine de vente avec présentation des produits et prise de commande.</p><p class="price">20 000 FCFA</p></div>
+<p class="price">5 000 FCFA</p>
 
-<div class="card"><h3>Affiche publicitaire</h3><p>Des affiches pour promouvoir vos produits.</p><p class="price">2 000 FCFA</p></div>
+</div>
 
-<div class="card"><h3>Création de logo</h3><p>Une identité visuelle pour votre activité.</p><p class="price">3 000 FCFA</p></div>
+<div class="card">
 
-<div class="card"><h3>Visuel réseaux sociaux</h3><p>Des visuels pour WhatsApp et Facebook.</p><p class="price">1 500 FCFA</p></div>
+<h3>Site vitrine</h3>
 
-<div class="card"><h3>Création de CV</h3><p>Un CV clair et professionnel.</p><p class="price">2 000 FCFA</p></div>
+<p>Présentez votre entreprise et vos services.</p>
 
-<div class="card"><h3>Saisie de documents</h3><p>Saisie et mise en forme de vos documents.</p><p class="price">À partir de 500 FCFA/page</p></div>
+<p class="price">10 000 FCFA</p>
+
+</div>
+
+<div class="card">
+
+<h3>Catalogue de produits</h3>
+
+<p>Présentez vos articles avec photos et prix.</p>
+
+<p class="price">12 000 FCFA</p>
+
+</div>
+
+<div class="card">
+
+<h3>Site e-commerce simple</h3>
+
+<p>Une vitrine de vente avec présentation des produits et prise de commande.</p>
+
+<p class="price">20 000 FCFA</p>
+
+</div>
+
+<div class="card">
+
+<h3>Affiche publicitaire</h3>
+
+<p>Des affiches pour promouvoir vos produits.</p>
+
+<p class="price">2 000 FCFA</p>
+
+</div>
+
+<div class="card">
+
+<h3>Création de logo</h3>
+
+<p>Une identité visuelle pour votre activité.</p>
+
+<p class="price">3 000 FCFA</p>
+
+</div>
+
+<div class="card">
+
+<h3>Visuel réseaux sociaux</h3>
+
+<p>Des visuels pour WhatsApp et Facebook.</p>
+
+<p class="price">1 500 FCFA</p>
+
+</div>
+
+<div class="card">
+
+<h3>Création de CV</h3>
+
+<p>Un CV clair et professionnel.</p>
+
+<p class="price">2 000 FCFA</p>
+
+</div>
+
+<div class="card">
+
+<h3>Saisie de documents</h3>
+
+<p>Saisie et mise en forme de vos documents.</p>
+
+<p class="price">À partir de 500 FCFA/page</p>
+
+</div>
 
 </div>
 
@@ -188,7 +438,17 @@ section{padding:42px 5%}
 
 <div class="card">
 
-<div class="demo"><div><h3>MON CURRICULUM VITAE</h3><p>Profil • Formation • Compétences</p></div></div>
+<div class="demo">
+
+<div>
+
+<h3>MON CURRICULUM VITAE</h3>
+
+<p>Profil • Formation • Compétences</p>
+
+</div>
+
+</div>
 
 <h3>Création de CV</h3>
 
@@ -198,7 +458,17 @@ section{padding:42px 5%}
 
 <div class="card">
 
-<div class="demo"><div><h3>VOTRE MARQUE</h3><p>Des visuels qui attirent l'attention</p></div></div>
+<div class="demo">
+
+<div>
+
+<h3>VOTRE MARQUE</h3>
+
+<p>Des visuels qui attirent l'attention</p>
+
+</div>
+
+</div>
 
 <h3>Visuels réseaux sociaux</h3>
 
@@ -208,7 +478,17 @@ section{padding:42px 5%}
 
 <div class="card">
 
-<div class="demo"><div><h3>VOTRE ENTREPRISE</h3><p>Bienvenue sur notre site web</p></div></div>
+<div class="demo">
+
+<div>
+
+<h3>VOTRE ENTREPRISE</h3>
+
+<p>Bienvenue sur notre site web</p>
+
+</div>
+
+</div>
 
 <h3>Site Internet</h3>
 
@@ -218,7 +498,17 @@ section{padding:42px 5%}
 
 <div class="card">
 
-<div class="demo"><div><h3>CATALOGUE PRODUITS</h3><p>Découvrez nos articles et nos prix</p></div></div>
+<div class="demo">
+
+<div>
+
+<h3>CATALOGUE PRODUITS</h3>
+
+<p>Découvrez nos articles et nos prix</p>
+
+</div>
+
+</div>
 
 <h3>Catalogue de produits</h3>
 
@@ -228,7 +518,11 @@ section{padding:42px 5%}
 
 </div>
 
-<p style="text-align:center;margin-top:20px;color:#64748b;font-size:13px">Certains visuels sont des exemples de démonstration.</p>
+<p style="text-align:center;margin-top:20px;color:#64748b;font-size:13px">
+
+Certains visuels sont des exemples de démonstration.
+
+</p>
 
 </section>
 
@@ -246,11 +540,23 @@ section{padding:42px 5%}
 
 <p>Vous avez un projet ? Parlons-en !</p>
 
-<p><strong>WhatsApp :</strong> <a href="https://wa.me/2250564369543">05 64 36 95 43</a></p>
+<p><strong>WhatsApp :</strong>
 
-<p><strong>Email :</strong> <a href="mailto:abdoulayediomande243@gmail.com">abdoulayediomande243@gmail.com</a></p>
+<a href="https://wa.me/2250564369543">05 64 36 95 43</a>
 
-<a class="btn" href="https://wa.me/2250564369543">Nous contacter sur WhatsApp</a>
+</p>
+
+<p><strong>Email :</strong>
+
+<a href="mailto:abdoulayediomande243@gmail.com">abdoulayediomande243@gmail.com</a>
+
+</p>
+
+<a class="btn" href="https://wa.me/2250564369543">
+
+Nous contacter sur WhatsApp
+
+</a>
 
 </section>
 
