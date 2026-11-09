@@ -6,549 +6,801 @@
 
 <head>
 
-  <meta charset="UTF-8">
+<meta charset="UTF-8">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Diom Service - Services numériques</title>
+<title>Diom Service | Solutions numériques</title>
 
-  <meta name="description" content="Diom Service accompagne les petits commerçants dans leur communication et leur présence sur Internet.">
+<meta name="description" content="Diom Service : création de sites Internet, logos, affiches publicitaires, CV et visuels numériques.">
 
-  <style>
+<style>
 
-    * {
+* {
 
-      margin: 0;
+  margin: 0;
 
-      padding: 0;
+  padding: 0;
 
-      box-sizing: border-box;
+  box-sizing: border-box;
 
-      scroll-behavior: smooth;
+  scroll-behavior: smooth;
 
-    }
+}
 
-    body {
+body {
 
-      font-family: Arial, sans-serif;
+  font-family: Arial, sans-serif;
 
-      background: #f4f7fb;
+  background: #f4f7fb;
 
-      color: #172033;
+  color: #172033;
 
-      line-height: 1.6;
+  line-height: 1.6;
 
-    }
+}
 
-    header {
+header {
 
-      background: #071b38;
+  background: #071b38;
 
-      color: white;
+  color: white;
 
-      padding: 18px 7%;
+  padding: 18px 6%;
 
-      display: flex;
+  display: flex;
 
-      justify-content: space-between;
+  justify-content: space-between;
 
-      align-items: center;
+  align-items: center;
 
-      flex-wrap: wrap;
+  flex-wrap: wrap;
 
-      gap: 15px;
+  gap: 15px;
 
-    }
+}
 
-    .logo {
+.logo {
 
-      font-size: 25px;
+  font-size: 25px;
 
-      font-weight: bold;
+  font-weight: bold;
 
-      color: #27d5e8;
+  color: #27d5e8;
 
-    }
+}
 
-    nav {
+nav {
 
-      display: flex;
+  display: flex;
 
-      flex-wrap: wrap;
+  flex-wrap: wrap;
 
-      gap: 15px;
+  gap: 14px;
 
-    }
+}
 
-    nav a {
+nav a {
 
-      color: white;
+  color: white;
 
-      text-decoration: none;
+  text-decoration: none;
 
-      font-size: 14px;
+  font-size: 14px;
 
-    }
+}
 
-    nav a:hover {
+nav a:hover {
 
-      color: #27d5e8;
+  color: #27d5e8;
 
-    }
+}
 
-    .hero {
+.hero {
 
-      background: linear-gradient(135deg, #071b38, #075b9c);
+  background: linear-gradient(135deg, #071b38, #075b9c);
 
-      color: white;
+  color: white;
 
-      text-align: center;
+  text-align: center;
 
-      padding: 85px 20px;
+  padding: 85px 20px;
 
-    }
+}
 
-    .hero h1 {
+.hero h1 {
 
-      font-size: 38px;
+  font-size: 38px;
 
-      margin-bottom: 15px;
+  margin-bottom: 15px;
 
-    }
+}
 
-    .hero p {
+.hero p {
 
-      max-width: 650px;
+  max-width: 680px;
 
-      margin: auto;
+  margin: auto;
 
-      font-size: 17px;
+  font-size: 17px;
 
-    }
+}
 
-    .btn {
+.btn {
 
-      display: inline-block;
+  display: inline-block;
 
-      background: #20c9dc;
+  background: #20c9dc;
 
-      color: #071b38;
+  color: #071b38;
 
-      padding: 13px 23px;
+  padding: 13px 23px;
 
-      border-radius: 7px;
+  border-radius: 7px;
 
-      text-decoration: none;
+  text-decoration: none;
 
-      font-weight: bold;
+  font-weight: bold;
 
-      margin-top: 22px;
+  margin-top: 22px;
 
-    }
+}
 
-    .btn:hover {
+section {
 
-      background: white;
+  padding: 60px 7%;
 
-    }
+}
 
-    section {
+.section-title {
 
-      padding: 60px 7%;
+  text-align: center;
 
-    }
+  color: #071b38;
 
-    .section-title {
+  font-size: 29px;
 
-      text-align: center;
+  margin-bottom: 12px;
 
-      color: #071b38;
+}
 
-      font-size: 29px;
+.intro {
 
-      margin-bottom: 12px;
+  text-align: center;
 
-    }
+  color: #64748b;
 
-    .intro {
+  margin-bottom: 35px;
 
-      text-align: center;
+}
 
-      color: #64748b;
+.cards {
 
-      margin-bottom: 35px;
+  display: grid;
 
-    }
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
 
-    .cards {
+  gap: 20px;
 
-      display: grid;
+}
 
-      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+.card {
 
-      gap: 20px;
+  background: white;
 
-    }
+  padding: 25px;
 
-    .card {
+  border-radius: 12px;
 
-      background: white;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.07);
 
-      padding: 25px;
+  border-bottom: 4px solid #20c9dc;
 
-      border-radius: 12px;
+}
 
-      box-shadow: 0 4px 15px rgba(0,0,0,0.07);
+.card h3 {
 
-      border-bottom: 4px solid #20c9dc;
+  color: #075b9c;
 
-    }
+  margin-bottom: 10px;
 
-    .card h3 {
+}
 
-      color: #075b9c;
+.price {
 
-      margin-bottom: 10px;
+  color: #087b69;
 
-    }
+  font-weight: bold;
 
-    .price {
+  font-size: 19px;
 
-      color: #087b69;
+  margin-top: 15px;
 
-      font-weight: bold;
+}
 
-      font-size: 20px;
+/* PORTFOLIO */
 
-      margin-top: 15px;
+.portfolio {
 
-    }
+  background: #eaf1f8;
 
-    .about {
+}
 
-      background: white;
+.portfolio-card {
 
-      text-align: center;
+  background: white;
 
-    }
+  border-radius: 12px;
 
-    .about p {
+  overflow: hidden;
 
-      max-width: 750px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
 
-      margin: 15px auto;
+}
 
-    }
+.portfolio-art {
 
-    .contact {
+  min-height: 190px;
 
-      background: #071b38;
+  padding: 22px;
 
-      color: white;
+  display: flex;
 
-      text-align: center;
+  flex-direction: column;
 
-    }
+  justify-content: center;
 
-    .contact .section-title {
+  align-items: center;
 
-      color: white;
+  text-align: center;
 
-    }
+  color: white;
 
-    .contact p {
+}
 
-      margin: 12px 0;
+.poster {
 
-    }
+  background: linear-gradient(135deg, #241044, #d52e72);
 
-    .contact a {
+}
 
-      color: #27d5e8;
+.logo-art {
 
-      text-decoration: none;
+  background: linear-gradient(135deg, #071b38, #168ca7);
 
-    }
+}
 
-    .whatsapp {
+.cv-art {
 
-      display: inline-block;
+  background: linear-gradient(135deg, #263c55, #6789a8);
 
-      background: #20c66b;
+}
 
-      color: white !important;
+.social-art {
 
-      padding: 14px 24px;
+  background: linear-gradient(135deg, #e66a35, #e3b13c);
 
-      border-radius: 8px;
+}
 
-      margin-top: 15px;
+.web-art {
 
-      font-weight: bold;
+  background: linear-gradient(135deg, #062d4e, #20a8bd);
 
-    }
+}
 
-    footer {
+.catalog-art {
 
-      background: #041126;
+  background: linear-gradient(135deg, #294b35, #8da95d);
 
-      color: white;
+}
 
-      text-align: center;
+.portfolio-art .big {
 
-      padding: 20px;
+  font-size: 27px;
 
-      font-size: 14px;
+  font-weight: bold;
 
-    }
+  line-height: 1.2;
 
-    @media (max-width: 600px) {
+}
 
-      header {
+.portfolio-art .small {
 
-        justify-content: center;
+  font-size: 13px;
 
-        text-align: center;
+  margin-top: 10px;
 
-      }
+  letter-spacing: 1px;
 
-      nav {
+}
 
-        justify-content: center;
+.portfolio-info {
 
-      }
+  padding: 18px;
 
-      .hero h1 {
+}
 
-        font-size: 29px;
+.portfolio-info h3 {
 
-      }
+  color: #075b9c;
 
-      section {
+  margin-bottom: 7px;
 
-        padding: 45px 6%;
+}
 
-      }
+.portfolio-info p {
 
-    }
+  font-size: 14px;
 
-  </style>
+  color: #64748b;
+
+}
+
+.about {
+
+  background: white;
+
+  text-align: center;
+
+}
+
+.about p {
+
+  max-width: 750px;
+
+  margin: 15px auto;
+
+}
+
+.contact {
+
+  background: #071b38;
+
+  color: white;
+
+  text-align: center;
+
+}
+
+.contact .section-title {
+
+  color: white;
+
+}
+
+.contact p {
+
+  margin: 12px 0;
+
+}
+
+.contact a {
+
+  color: #27d5e8;
+
+  text-decoration: none;
+
+}
+
+.whatsapp {
+
+  display: inline-block;
+
+  background: #20c66b;
+
+  color: white !important;
+
+  padding: 14px 24px;
+
+  border-radius: 8px;
+
+  margin-top: 15px;
+
+  font-weight: bold;
+
+}
+
+footer {
+
+  background: #041126;
+
+  color: white;
+
+  text-align: center;
+
+  padding: 20px;
+
+  font-size: 14px;
+
+}
+
+@media (max-width: 600px) {
+
+  header {
+
+    justify-content: center;
+
+    text-align: center;
+
+  }
+
+  nav {
+
+    justify-content: center;
+
+  }
+
+  .hero h1 {
+
+    font-size: 29px;
+
+  }
+
+  section {
+
+    padding: 45px 6%;
+
+  }
+
+}
+
+</style>
 
 </head>
 
 <body>
 
-  <header>
+<header>
 
-    <div class="logo">DIOM SERVICE</div>
+  <div class="logo">DIOM SERVICE</div>
 
-    <nav>
+  <nav>
 
-      <a href="#accueil">Accueil</a>
+    <a href="#accueil">Accueil</a>
 
-      <a href="#services">Services</a>
+    <a href="#services">Services</a>
 
-      <a href="#tarifs">Tarifs</a>
+    <a href="#realisations">Réalisations</a>
 
-      <a href="#apropos">À propos</a>
+    <a href="#tarifs">Tarifs</a>
 
-      <a href="#contact">Contact</a>
+    <a href="#apropos">À propos</a>
 
-    </nav>
+    <a href="#contact">Contact</a>
 
-  </header>
+  </nav>
 
-  <section class="hero" id="accueil">
+</header>
 
-    <h1>Bienvenue chez Diom Service</h1>
+<section class="hero" id="accueil">
 
-    <p>
+  <h1>Bienvenue chez Diom Service</h1>
 
-      Votre partenaire numérique pour développer votre activité.
+  <p>
 
-      Nous accompagnons les petits commerçants, entrepreneurs et particuliers
+    Votre partenaire numérique pour développer votre activité.
 
-      avec des services numériques accessibles.
+    Nous accompagnons les commerçants, entrepreneurs et particuliers
 
-    </p>
+    avec des solutions numériques accessibles.
 
-    <a class="btn" href="#services">Découvrir nos prestations</a>
+  </p>
 
-  </section>
+  <a class="btn" href="#services">Découvrir nos services</a>
 
-  <section id="services">
+</section>
 
-    <h2 class="section-title">Nos prestations</h2>
+<section id="services">
 
-    <p class="intro">Découvrez les services proposés par Diom Service.</p>
+  <h2 class="section-title">Nos prestations</h2>
 
-    <div class="cards">
+  <p class="intro">Découvrez les services proposés par Diom Service.</p>
 
-      <div class="card">
+  <div class="cards">
 
-        <h3>Création de mini-sites</h3>
+    <div class="card">
 
-        <p>Une petite page Internet pour présenter votre activité et vos coordonnées.</p>
+      <h3>Création de mini-sites</h3>
 
-        <div class="price">5 000 F CFA</div>
+      <p>Une petite page Internet pour présenter votre activité et vos coordonnées.</p>
+
+      <div class="price">5 000 F CFA</div>
+
+    </div>
+
+    <div class="card">
+
+      <h3>Sites vitrines</h3>
+
+      <p>Présentez votre entreprise, vos services et vos informations sur Internet.</p>
+
+      <div class="price">10 000 F CFA</div>
+
+    </div>
+
+    <div class="card">
+
+      <h3>Catalogues de produits</h3>
+
+      <p>Montrez vos articles, leurs photos, leurs prix et leurs caractéristiques.</p>
+
+      <div class="price">12 000 F CFA</div>
+
+    </div>
+
+    <div class="card">
+
+      <h3>Sites e-commerce</h3>
+
+      <p>Une boutique en ligne simple pour présenter vos articles et recevoir des commandes.</p>
+
+      <div class="price">20 000 F CFA</div>
+
+    </div>
+
+    <div class="card">
+
+      <h3>Affiches publicitaires</h3>
+
+      <p>Des affiches pour vos promotions, événements et annonces commerciales.</p>
+
+      <div class="price">2 000 F CFA</div>
+
+    </div>
+
+    <div class="card">
+
+      <h3>Création de logos</h3>
+
+      <p>Un logo pour donner une identité visuelle à votre commerce ou entreprise.</p>
+
+      <div class="price">3 000 F CFA</div>
+
+    </div>
+
+    <div class="card">
+
+      <h3>Visuels pour réseaux sociaux</h3>
+
+      <p>Des publications pour WhatsApp, Facebook et Instagram.</p>
+
+      <div class="price">1 500 F CFA</div>
+
+    </div>
+
+    <div class="card">
+
+      <h3>Création de CV</h3>
+
+      <p>Un CV clair et professionnel pour vos recherches d'emploi ou de stage.</p>
+
+      <div class="price">2 000 F CFA</div>
+
+    </div>
+
+    <div class="card">
+
+      <h3>Saisie de documents</h3>
+
+      <p>Saisie et mise en forme de lettres, factures, devis et autres documents.</p>
+
+      <div class="price">À partir de 500 F CFA/page</div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- GALERIE PORTFOLIO -->
+
+<section class="portfolio" id="realisations">
+
+  <h2 class="section-title">Nos réalisations</h2>
+
+  <p class="intro">
+
+    Découvrez quelques exemples de créations proposées par Diom Service.
+
+    Ces maquettes sont des démonstrations.
+
+  </p>
+
+  <div class="cards">
+
+    <div class="portfolio-card">
+
+      <div class="portfolio-art poster">
+
+        <div class="small">FASHION STYLE</div>
+
+        <div class="big">GRANDE<br>PROMOTION</div>
+
+        <div class="small">-20 % SUR NOS ARTICLES</div>
 
       </div>
 
-      <div class="card">
+      <div class="portfolio-info">
 
-        <h3>Sites vitrines</h3>
+        <h3>Affiche publicitaire</h3>
 
-        <p>Présentez votre entreprise, vos services et vos informations sur Internet.</p>
-
-        <div class="price">10 000 F CFA</div>
-
-      </div>
-
-      <div class="card">
-
-        <h3>Catalogues de produits</h3>
-
-        <p>Montrez vos articles, leurs photos, leurs prix et leurs caractéristiques.</p>
-
-        <div class="price">12 000 F CFA</div>
-
-      </div>
-
-      <div class="card">
-
-        <h3>Sites e-commerce</h3>
-
-        <p>Une boutique en ligne simple pour présenter vos articles et recevoir des commandes.</p>
-
-        <div class="price">20 000 F CFA</div>
-
-      </div>
-
-      <div class="card">
-
-        <h3>Affiches publicitaires</h3>
-
-        <p>Des affiches pour vos promotions, événements et annonces commerciales.</p>
-
-        <div class="price">2 000 F CFA</div>
-
-      </div>
-
-      <div class="card">
-
-        <h3>Création de logos</h3>
-
-        <p>Un logo pour donner une identité visuelle à votre commerce ou entreprise.</p>
-
-        <div class="price">3 000 F CFA</div>
-
-      </div>
-
-      <div class="card">
-
-        <h3>Visuels pour réseaux sociaux</h3>
-
-        <p>Des publications pour présenter vos produits sur WhatsApp, Facebook et Instagram.</p>
-
-        <div class="price">1 500 F CFA</div>
-
-      </div>
-
-      <div class="card">
-
-        <h3>Création de CV</h3>
-
-        <p>Un CV clair et professionnel pour vos recherches d'emploi ou de stage.</p>
-
-        <div class="price">2 000 F CFA</div>
-
-      </div>
-
-      <div class="card">
-
-        <h3>Saisie de documents</h3>
-
-        <p>Saisie et mise en forme de lettres, factures, devis et autres documents.</p>
-
-        <div class="price">À partir de 500 F CFA/page</div>
+        <p>Exemple d'affiche promotionnelle pour une boutique de vêtements.</p>
 
       </div>
 
     </div>
 
-  </section>
+    <div class="portfolio-card">
 
-  <section id="tarifs">
+      <div class="portfolio-art logo-art">
 
-    <h2 class="section-title">Nos tarifs</h2>
+        <div class="big">FS</div>
 
-    <p class="intro">
+        <div class="small">FASHION STYLE</div>
 
-      Des prix de lancement accessibles pour les petits budgets.
+      </div>
 
-    </p>
+      <div class="portfolio-info">
 
-    <p class="intro">
+        <h3>Création de logo</h3>
 
-      Les tarifs affichés sont indicatifs. Le prix définitif dépend du travail
+        <p>Exemple d'identité visuelle pour un commerce de mode.</p>
 
-      demandé et des fonctionnalités souhaitées.
+      </div>
 
-    </p>
+    </div>
 
-  </section>
+    <div class="portfolio-card">
 
-  <section class="about" id="apropos">
+      <div class="portfolio-art cv-art">
 
-    <h2 class="section-title">À propos de Diom Service</h2>
+        <div class="big">MON CV</div>
 
-    <p>
+        <div class="small">COMPÉTENCES • EXPÉRIENCES • FORMATION</div>
 
-      Diom Service est un projet de services numériques qui vise à aider
+      </div>
 
-      les petits commerçants, entrepreneurs et particuliers à mieux présenter
+      <div class="portfolio-info">
 
-      leurs activités grâce aux outils numériques.
+        <h3>CV professionnel</h3>
 
-    </p>
+        <p>Exemple de présentation d'un curriculum vitae.</p>
 
-    <p>
+      </div>
 
-      Notre objectif : proposer des solutions simples, pratiques et abordables.
+    </div>
 
-    </p>
+    <div class="portfolio-card">
 
-  </section>
+      <div class="portfolio-art social-art">
 
-  <section class="contact" id="contact">
+        <div class="small">NOUVELLE COLLECTION</div>
 
-    <h2 class="section-title">Contactez-nous</h2>
+        <div class="big">STYLE & MODE</div>
 
-    <p>Vous avez un projet ou besoin d'une prestation ? Écrivez-nous.</p>
+        <div class="small">DÉCOUVREZ NOS ARTICLES</div>
 
-    <p>WhatsApp : 05 64 36 95 43</p>
+      </div>
 
-    <p>Email : abdoulayediomande243@gmail.com</p>
+      <div class="portfolio-info">
 
-    <a class="whatsapp"
+        <h3>Visuel pour réseaux sociaux</h3>
 
-       href="https://wa.me/2250564369543"
+        <p>Exemple de publication commerciale pour les réseaux sociaux.</p>
 
-       target="_blank">
+      </div>
 
-      Nous contacter sur WhatsApp
+    </div>
 
-    </a>
+    <div class="portfolio-card">
 
-  </section>
+      <div class="portfolio-art web-art">
 
-  <footer>
+        <div class="big">MON ENTREPRISE</div>
 
-    <p>© 2026 Diom Service - Tous droits réservés.</p>
+        <div class="small">VOTRE ACTIVITÉ SUR INTERNET</div>
 
-    <p>Des solutions numériques accessibles à tous.</p>
+      </div>
 
-  </footer>
+      <div class="portfolio-info">
+
+        <h3>Site vitrine</h3>
+
+        <p>Exemple de page d'accueil pour présenter une entreprise.</p>
+
+      </div>
+
+    </div>
+
+    <div class="portfolio-card">
+
+      <div class="portfolio-art catalog-art">
+
+        <div class="big">MON CATALOGUE</div>
+
+        <div class="small">PRODUITS • PRIX • COMMANDES</div>
+
+      </div>
+
+      <div class="portfolio-info">
+
+        <h3>Catalogue de produits</h3>
+
+        <p>Exemple de présentation de produits pour une boutique.</p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section id="tarifs">
+
+  <h2 class="section-title">Nos tarifs</h2>
+
+  <p class="intro">
+
+    Des prix de lancement accessibles pour les petits budgets.
+
+    Les tarifs sont indicatifs et peuvent varier selon le travail demandé.
+
+  </p>
+
+</section>
+
+<section class="about" id="apropos">
+
+  <h2 class="section-title">À propos de Diom Service</h2>
+
+  <p>
+
+    Diom Service est un projet de services numériques qui vise à aider
+
+    les petits commerçants, entrepreneurs et particuliers à mieux présenter
+
+    leurs activités grâce aux outils numériques.
+
+  </p>
+
+  <p>
+
+    Notre objectif : proposer des solutions simples, pratiques et abordables.
+
+  </p>
+
+</section>
+
+<section class="contact" id="contact">
+
+  <h2 class="section-title">Contactez-nous</h2>
+
+  <p>Vous avez un projet ou besoin d'une prestation ? Écrivez-nous.</p>
+
+  <p>WhatsApp : 05 64 36 95 43</p>
+
+  <p>Email : abdoulayediomande243@gmail.com</p>
+
+  <a class="whatsapp"
+
+     href="https://wa.me/2250564369543"
+
+     target="_blank">
+
+    Nous contacter sur WhatsApp
+
+  </a>
+
+</section>
+
+<footer>
+
+  <p>© 2026 Diom Service - Tous droits réservés.</p>
+
+  <p>Des solutions numériques accessibles à tous.</p>
+
+</footer>
 
 </body>
 
