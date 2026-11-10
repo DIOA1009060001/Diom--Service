@@ -1,554 +1,1059 @@
+
+
 <!DOCTYPE html>
+
 <html lang="fr">
+
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>DIOM SERVICE | Solutions numériques</title>
+
 <meta name="description" content="DIOM SERVICE : création de sites web, logos, affiches publicitaires, CV et visuels numériques.">
+
 <meta name="theme-color" content="#071b3b">
+
 <link rel="icon" type="image/png" href="logo-diom-service.png.PNG">
+
 <link rel="apple-touch-icon" href="logo-diom-service.png.PNG">
 
 <style>
+
 :root {
+
   --navy:#071b3b;
+
   --blue:#0759a6;
+
   --cyan:#16c5df;
+
   --ink:#17233b;
+
   --muted:#617089;
+
   --bg:#f4f7fb;
+
   --line:#e5ebf3;
+
 }
+
 *{margin:0;padding:0;box-sizing:border-box}
+
 html{scroll-behavior:smooth;scroll-padding-top:90px}
+
 body{font-family:Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.65}
+
 a{color:inherit}
+
 img{max-width:100%;display:block}
+
 .container{width:min(1120px,92%);margin:auto}
 
 .site-header{
+
 position:sticky;top:0;z-index:1000;
+
 background:rgba(7,27,59,.97);color:white;
+
 box-shadow:0 5px 22px #071b3b20
+
 }
+
 .header-inner{
+
 min-height:76px;display:flex;align-items:center;
+
 justify-content:space-between;gap:20px
+
 }
+
 .brand{display:flex;align-items:center;gap:11px;text-decoration:none;font-weight:800}
+
 .brand img{width:48px;height:48px;object-fit:contain;background:white;border-radius:10px;padding:3px}
+
 .brand span{font-size:20px}
+
 .nav-links{display:flex;align-items:center;gap:22px}
+
 .nav-links a{text-decoration:none;font-size:14px;font-weight:bold;color:white}
+
 .nav-links a:hover{color:var(--cyan)}
+
 .nav-cta{background:var(--cyan);color:var(--navy)!important;padding:10px 15px;border-radius:9px}
+
 .menu-toggle{display:none;background:transparent;color:white;border:1px solid #ffffff55;border-radius:9px;padding:9px 12px;font-size:22px}
 
 .hero{
+
 background:linear-gradient(125deg,#071b3b,#0759a6 65%,#087fc0);
+
 color:white;text-align:center;padding:88px 20px 92px
+
 }
+
 .hero-content{max-width:780px;margin:auto}
+
 .eyebrow{display:inline-block;border:1px solid #ffffff55;border-radius:30px;padding:6px 14px;font-size:13px;font-weight:bold;margin-bottom:18px}
+
 .hero h1{font-size:clamp(34px,5vw,54px);line-height:1.13;margin-bottom:19px}
+
 .hero p{font-size:18px;max-width:690px;margin:0 auto 29px;color:#e8f3ff}
+
 .actions{display:flex;justify-content:center;gap:13px;flex-wrap:wrap}
+
 .btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 20px;border-radius:10px;text-decoration:none;font-weight:bold;border:0;cursor:pointer}
+
 .btn-primary{background:var(--cyan);color:var(--navy)}
+
 .btn-outline{border:1px solid white;color:white;background:transparent}
 
 .trust-strip{background:white;border-bottom:1px solid var(--line)}
+
 .trust-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;padding:20px 0;text-align:center}
+
 .trust-item strong{display:block;color:var(--blue)}
+
 .trust-item span{font-size:13px;color:var(--muted)}
 
 section{padding:76px 0}
+
 .section-heading{text-align:center;max-width:700px;margin:0 auto 38px}
+
 .kicker{color:var(--blue);font-size:13px;font-weight:bold;text-transform:uppercase;letter-spacing:1px}
+
 .section-heading h2{font-size:clamp(27px,4vw,36px);color:#123b70;margin:8px 0 12px}
+
 .section-heading p{color:var(--muted)}
 
 .services-grid,.portfolio-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+
 .service-card{
+
 background:white;padding:25px;border:1px solid var(--line);
+
 border-radius:18px;display:flex;flex-direction:column;min-height:245px;
+
 box-shadow:0 5px 20px #071b3b08
+
 }
+
 .service-icon{width:48px;height:48px;border-radius:13px;background:#e8f6fb;display:grid;place-items:center;font-size:23px;margin-bottom:16px}
+
 .service-card h3{color:var(--blue);font-size:19px;margin-bottom:8px}
+
 .service-card p{color:var(--muted);font-size:14px}
+
 .service-bottom{margin-top:auto;padding-top:18px;display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
+
 .price{font-size:18px;font-weight:bold;color:#0786a7}
+
 .small-link{font-size:13px;font-weight:bold;color:var(--blue);text-decoration:none}
 
 .portfolio-section{background:#eaf2fb}
+
 .portfolio-card{background:white;border-radius:18px;padding:14px}
+
 .portfolio-card img,.demo-visual{
+
 width:100%;height:220px;object-fit:contain;
+
 background:#edf3fa;border-radius:12px;margin-bottom:14px
+
 }
+
 .demo-visual{
+
 display:flex;align-items:center;justify-content:center;
+
 text-align:center;padding:20px;color:white;
+
 background:linear-gradient(135deg,#071b3b,#087fc0)
+
 }
+
 .demo-visual strong{font-size:27px;display:block;margin-bottom:10px}
+
 .demo-visual span{color:#e4f3ff}
+
 .portfolio-card h3{color:var(--blue);margin-bottom:5px}
+
 .portfolio-card p{font-size:14px;color:var(--muted)}
+
 .notice{text-align:center;color:var(--muted);font-size:13px;margin-top:22px}
 
+/* Bouton de découverte des projets */
+
+.project-link{
+
+display:block;text-align:center;
+
+background:var(--blue);color:white;
+
+padding:12px;border-radius:9px;
+
+text-decoration:none;font-weight:bold;
+
+margin-top:15px;
+
+transition:background .2s,transform .2s
+
+}
+
+.project-link:hover{background:#087fc0;transform:translateY(-2px)}
+
+.project-tag{
+
+display:inline-block;background:#e4f7ec;
+
+color:#168b49;padding:5px 10px;
+
+border-radius:20px;font-size:11px;
+
+font-weight:bold;margin:8px 0
+
+}
+
+.project-description{min-height:90px}
+
 .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:center}
+
 .about-panel{background:white;padding:30px;border-radius:18px}
+
 .about-panel h2{color:#123b70;font-size:30px;margin:8px 0 15px}
+
 .about-panel p{color:var(--muted);margin-bottom:12px}
+
 .checks{list-style:none;display:grid;gap:12px;margin-top:20px}
+
 .checks li:before{content:"✓";color:#0786a7;font-weight:bold;margin-right:10px}
+
 .values{display:grid;grid-template-columns:1fr 1fr;gap:13px}
+
 .value-card{background:#eaf4fc;border:1px solid #d9e8f6;border-radius:14px;padding:20px}
+
 .value-card strong{display:block;color:var(--blue)}
+
 .value-card span{font-size:13px;color:var(--muted)}
 
 .quote-section{background:#071b3b;color:white}
+
 .quote-section .section-heading h2{color:white}
+
 .quote-section .section-heading p{color:#d4e1f1}
+
 .quote-form{max-width:760px;margin:auto;background:white;color:var(--ink);padding:28px;border-radius:18px}
+
 .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+
 .field{display:flex;flex-direction:column;gap:7px}
+
 .field.full{grid-column:1/-1}
+
 label{font-size:13px;font-weight:bold}
+
 input,select,textarea{
+
 width:100%;padding:13px 14px;border:1px solid #d8e1ec;
+
 border-radius:9px;font:inherit;color:var(--ink);background:white
+
 }
+
 textarea{min-height:110px;resize:vertical}
+
 .form-note{font-size:12px;color:var(--muted);margin:12px 0 17px}
+
 .quote-form .btn{width:100%}
 
 .faq-list{max-width:820px;margin:auto;display:grid;gap:12px}
+
 details{background:white;border:1px solid var(--line);border-radius:12px;padding:17px 20px}
+
 summary{font-weight:bold;color:#123b70;cursor:pointer}
+
 details p{color:var(--muted);font-size:14px;padding-top:10px}
 
 .contact-section{text-align:center}
+
 .contact-box{max-width:780px;margin:auto;background:white;padding:34px;border-radius:18px}
+
 .contact-box p{color:var(--muted);margin:8px 0}
+
 .contact-details{display:flex;justify-content:center;gap:24px;flex-wrap:wrap;margin:20px 0}
+
 .contact-details a{font-weight:bold;color:var(--blue);text-decoration:none}
 
 footer{background:#06152e;color:#dce7f5;padding:30px 0;text-align:center}
+
 footer strong{color:white;font-size:19px}
+
 footer p{margin:5px 0;font-size:14px}
+
 .footer-links{display:flex;justify-content:center;gap:18px;flex-wrap:wrap;margin:15px 0}
+
 .footer-links a{color:#dce7f5;text-decoration:none;font-size:13px}
+
 .whatsapp-float{
+
 position:fixed;right:18px;bottom:18px;z-index:900;
+
 background:#19b968;color:white;text-decoration:none;
+
 font-weight:bold;padding:13px 17px;border-radius:50px
+
 }
 
 @media(max-width:850px){
+
 .menu-toggle{display:block}
+
 .header-inner{min-height:70px}
+
 .nav-links{
+
 display:none;position:absolute;left:0;right:0;top:70px;
+
 background:#071b3b;padding:18px 5% 22px;
+
 flex-direction:column;align-items:stretch;gap:0
+
 }
+
 .nav-links.open{display:flex}
+
 .nav-links a{padding:12px 5px;border-bottom:1px solid #ffffff18}
+
 .nav-links .nav-cta{text-align:center;margin-top:12px}
+
 .services-grid,.portfolio-grid{grid-template-columns:repeat(2,1fr)}
+
 .about-grid{grid-template-columns:1fr}
+
 }
+
 @media(max-width:560px){
+
 section{padding:57px 0}
+
 .hero{padding:68px 0 72px}
+
 .hero h1{font-size:34px}
+
 .trust-grid{grid-template-columns:1fr;gap:12px}
+
 .services-grid,.portfolio-grid{grid-template-columns:1fr}
+
 .service-card{min-height:220px}
+
 .form-grid{grid-template-columns:1fr}
+
 .field.full{grid-column:auto}
+
 .quote-form{padding:20px}
+
 .contact-box{padding:25px 18px}
+
 .whatsapp-float{right:12px;bottom:12px;padding:11px 14px;font-size:13px}
+
 }
+
 </style>
+
 </head>
 
 <body>
 
 <header class="site-header">
+
 <div class="container header-inner">
+
 <a class="brand" href="#accueil">
+
 <img src="logo-diom-service.png.PNG" alt="Logo Diom Service">
+
 <span>DIOM SERVICE</span>
+
 </a>
 
 <button class="menu-toggle" id="menuToggle" aria-label="Ouvrir le menu">☰</button>
 
 <nav class="nav-links" id="navLinks">
+
 <a href="#accueil">Accueil</a>
+
 <a href="#services">Services</a>
+
 <a href="#realisations">Réalisations</a>
+
 <a href="#apropos">À propos</a>
+
 <a href="#faq">FAQ</a>
+
 <a class="nav-cta" href="#devis">Demander un devis</a>
+
 </nav>
+
 </div>
+
 </header>
 
 <main>
 
 <section class="hero" id="accueil">
+
 <div class="hero-content">
+
 <span class="eyebrow">VOTRE PARTENAIRE NUMÉRIQUE</span>
+
 <h1>Faites grandir votre activité avec le numérique.</h1>
+
 <p>Sites Internet, identité visuelle et supports de communication : DIOM SERVICE vous accompagne avec des solutions simples, accessibles et adaptées à vos besoins.</p>
+
 <div class="actions">
+
 <a class="btn btn-primary" href="#services">Découvrir nos services</a>
+
 <a class="btn btn-outline" href="#devis">Parler de mon projet</a>
+
 </div>
+
 </div>
+
 </section>
 
 <div class="trust-strip">
+
 <div class="container trust-grid">
+
 <div class="trust-item"><strong>Solutions accessibles</strong><span>Des offres adaptées à votre budget</span></div>
+
 <div class="trust-item"><strong>Écoute et accompagnement</strong><span>Un service selon votre besoin</span></div>
+
 <div class="trust-item"><strong>Contact direct</strong><span>Échange simple par WhatsApp</span></div>
+
 </div>
+
 </div>
 
 <section id="services">
+
 <div class="container">
+
 <div class="section-heading">
+
 <span class="kicker">Ce que nous faisons</span>
+
 <h2>Nos services et tarifs</h2>
+
 <p>Choisissez le service dont vous avez besoin. Cliquez sur Commander pour nous envoyer votre demande sur WhatsApp.</p>
+
 </div>
 
 <div class="services-grid">
 
 <article class="service-card">
+
 <div class="service-icon">🌐</div>
+
 <h3>Mini-site de présentation</h3>
+
 <p>Une petite page claire pour présenter votre activité et vos coordonnées.</p>
+
 <div class="service-bottom"><span class="price">5 000 FCFA</span><a class="small-link order-link" data-service="Mini-site de présentation" href="#">Commander →</a></div>
+
 </article>
 
 <article class="service-card">
+
 <div class="service-icon">🏢</div>
+
 <h3>Site vitrine</h3>
+
 <p>Présentez votre entreprise, vos services et vos moyens de contact.</p>
+
 <div class="service-bottom"><span class="price">10 000 FCFA</span><a class="small-link order-link" data-service="Site vitrine" href="#">Commander →</a></div>
+
 </article>
 
 <article class="service-card">
+
 <div class="service-icon">🛍️</div>
+
 <h3>Catalogue de produits</h3>
+
 <p>Présentez vos articles avec photos, descriptions et prix.</p>
+
 <div class="service-bottom"><span class="price">12 000 FCFA</span><a class="small-link order-link" data-service="Catalogue de produits" href="#">Commander →</a></div>
+
 </article>
 
 <article class="service-card">
+
 <div class="service-icon">🛒</div>
+
 <h3>Site e-commerce simple</h3>
+
 <p>Une vitrine de vente avec présentation des produits et prise de commande.</p>
+
 <div class="service-bottom"><span class="price">20 000 FCFA</span><a class="small-link order-link" data-service="Site e-commerce simple" href="#">Commander →</a></div>
+
 </article>
 
 <article class="service-card">
+
 <div class="service-icon">📢</div>
+
 <h3>Affiche publicitaire</h3>
+
 <p>Des affiches pour présenter vos produits et promouvoir votre activité.</p>
+
 <div class="service-bottom"><span class="price">2 000 FCFA</span><a class="small-link order-link" data-service="Affiche publicitaire" href="#">Commander →</a></div>
+
 </article>
 
 <article class="service-card">
+
 <div class="service-icon">✏️</div>
+
 <h3>Création de logo</h3>
+
 <p>Une identité visuelle pour aider votre activité à être reconnue.</p>
+
 <div class="service-bottom"><span class="price">3 000 FCFA</span><a class="small-link order-link" data-service="Création de logo" href="#">Commander →</a></div>
+
 </article>
 
 <article class="service-card">
+
 <div class="service-icon">📱</div>
+
 <h3>Visuel réseaux sociaux</h3>
+
 <p>Des visuels pour communiquer sur WhatsApp, Facebook et autres réseaux.</p>
+
 <div class="service-bottom"><span class="price">1 500 FCFA</span><a class="small-link order-link" data-service="Visuel réseaux sociaux" href="#">Commander →</a></div>
+
 </article>
 
 <article class="service-card">
+
 <div class="service-icon">📄</div>
+
 <h3>Création de CV</h3>
+
 <p>Un CV clair et professionnel pour présenter votre parcours.</p>
+
 <div class="service-bottom"><span class="price">2 000 FCFA</span><a class="small-link order-link" data-service="Création de CV" href="#">Commander →</a></div>
+
 </article>
 
 <article class="service-card">
+
 <div class="service-icon">⌨️</div>
+
 <h3>Saisie de documents</h3>
+
 <p>Saisie et mise en forme de vos documents.</p>
+
 <div class="service-bottom"><span class="price">À partir de 500 FCFA/page</span><a class="small-link order-link" data-service="Saisie de documents" href="#">Commander →</a></div>
+
 </article>
 
 </div>
+
 </div>
+
 </section>
 
 <section class="portfolio-section" id="realisations">
+
 <div class="container">
+
 <div class="section-heading">
+
 <span class="kicker">Notre savoir-faire</span>
+
 <h2>Quelques réalisations</h2>
+
 <p>Découvrez des exemples de supports et de présentations proposés par DIOM SERVICE.</p>
+
 </div>
 
 <div class="portfolio-grid">
+
 <article class="portfolio-card">
+
 <img src="affiche-chaussures.png.PNG" alt="Affiche publicitaire de chaussures" loading="lazy">
+
 <h3>Affiche publicitaire</h3>
+
 <p>Exemple de publicité pour une collection de chaussures.</p>
+
 </article>
 
 <article class="portfolio-card">
+
 <img src="logo-diom-service.png.PNG" alt="Logo Diom Service" loading="lazy">
+
 <h3>Identité visuelle</h3>
+
 <p>Logo et présentation de notre agence.</p>
+
 </article>
 
 <article class="portfolio-card">
+
 <div class="demo-visual"><div><strong>MON CURRICULUM VITAE</strong><span>Profil • Formation • Compétences</span></div></div>
+
 <h3>Création de CV</h3>
+
 <p>Exemple de mise en page d'un CV professionnel.</p>
+
 </article>
 
 <article class="portfolio-card">
+
 <div class="demo-visual"><div><strong>VOTRE MARQUE</strong><span>Des visuels qui attirent l'attention</span></div></div>
+
 <h3>Visuels réseaux sociaux</h3>
+
 <p>Exemple de visuel promotionnel pour les réseaux sociaux.</p>
+
 </article>
 
 <article class="portfolio-card">
+
 <div class="demo-visual"><div><strong>VOTRE ENTREPRISE</strong><span>Bienvenue sur votre site Internet</span></div></div>
+
 <h3>Site Internet</h3>
+
 <p>Exemple de présentation d'une entreprise sur Internet.</p>
+
 </article>
 
 <article class="portfolio-card">
+
 <div class="demo-visual"><div><strong>CATALOGUE PRODUITS</strong><span>Découvrez nos articles et nos prix</span></div></div>
+
 <h3>Catalogue de produits</h3>
+
 <p>Exemple de présentation de produits.</p>
+
 </article>
+
+<!-- NOUVELLE REALISATION : SAMAKE COMMANDES -->
+
+<article class="portfolio-card">
+
+<div class="demo-visual" style="background:linear-gradient(135deg,#17251D,#315b3b)">
+
+<div>
+
+<strong>🥖 SAMAKE COMMANDES</strong>
+
+<span>BOULANGERIE SAMAKE</span>
+
 </div>
+
+</div>
+
+<span class="project-tag">✓ PROJET RÉALISÉ</span>
+
+<h3>SAMAKE COMMANDES</h3>
+
+<p class="project-description">
+
+Application web de commande conçue pour la Boulangerie SAMAKE.
+
+Les livreurs sélectionnent leurs produits et leurs quantités.
+
+Le commis reçoit les commandes sur WhatsApp avec le nom du livreur,
+
+la date et l'heure de la commande.
+
+</p>
+
+<a class="project-link"
+
+href="https://dioa1009060001.github.io/BOULANGERIE--SAMAKE/"
+
+target="_blank"
+
+rel="noopener noreferrer">
+
+🚀 Découvrir l'application →
+
+</a>
+
+</article>
+
+<!-- FIN NOUVELLE REALISATION -->
+
+</div>
+
 <p class="notice">Certains visuels sont des exemples de démonstration et non des commandes clients.</p>
+
 </div>
+
 </section>
 
 <section id="apropos">
+
 <div class="container about-grid">
+
 <div class="about-panel">
+
 <span class="kicker">Qui sommes-nous ?</span>
+
 <h2>À propos de DIOM SERVICE</h2>
+
 <p>DIOM SERVICE est un projet de services numériques qui accompagne les particuliers, commerçants et entrepreneurs dans leur présence sur Internet et leur communication visuelle.</p>
+
 <p>Notre objectif est de proposer des solutions simples, accessibles et professionnelles, avec une attention particulière portée à la compréhension de chaque besoin.</p>
+
 <ul class="checks">
+
 <li>Des offres présentées clairement</li>
+
 <li>Un échange direct avant le travail</li>
+
 <li>Un accompagnement adapté à votre demande</li>
+
 </ul>
+
 </div>
 
 <div>
+
 <div class="section-heading" style="text-align:left;margin:0 0 18px">
+
 <span class="kicker">Nos engagements</span>
+
 <h2>Une relation simple et transparente</h2>
+
 <p>Nous voulons que chaque client sache ce qu'il demande et ce qui est prévu.</p>
+
 </div>
+
 <div class="values">
+
 <div class="value-card"><strong>Écoute</strong><span>Comprendre votre besoin avant de commencer.</span></div>
+
 <div class="value-card"><strong>Clarté</strong><span>Présenter les services et les tarifs.</span></div>
+
 <div class="value-card"><strong>Disponibilité</strong><span>Faciliter les échanges avec vous.</span></div>
+
 <div class="value-card"><strong>Progression</strong><span>Améliorer continuellement nos réalisations.</span></div>
+
 </div>
+
 </div>
+
 </div>
+
 </section>
 
 <section class="quote-section" id="devis">
+
 <div class="container">
+
 <div class="section-heading">
+
 <span class="kicker" style="color:#8beafa">Parlons de votre projet</span>
+
 <h2>Demander un devis</h2>
+
 <p>Remplissez les informations ci-dessous. Votre demande sera préparée et envoyée sur WhatsApp.</p>
+
 </div>
 
 <form class="quote-form" id="quoteForm">
+
 <div class="form-grid">
+
 <div class="field">
+
 <label for="clientName">Votre nom *</label>
+
 <input id="clientName" required placeholder="Ex. : Awa Koné">
+
 </div>
 
 <div class="field">
+
 <label for="clientPhone">Votre téléphone</label>
+
 <input id="clientPhone" placeholder="Ex. : 07 00 00 00 00">
+
 </div>
 
 <div class="field full">
+
 <label for="clientService">Service souhaité *</label>
+
 <select id="clientService" required>
+
 <option value="">Choisissez un service</option>
+
 <option>Mini-site de présentation</option>
+
 <option>Site vitrine</option>
+
 <option>Catalogue de produits</option>
+
 <option>Site e-commerce simple</option>
+
 <option>Affiche publicitaire</option>
+
 <option>Création de logo</option>
+
 <option>Visuel réseaux sociaux</option>
+
 <option>Création de CV</option>
+
 <option>Saisie de documents</option>
+
 <option>Autre demande</option>
+
 </select>
+
 </div>
 
 <div class="field full">
+
 <label for="clientDetails">Décrivez votre besoin *</label>
+
 <textarea id="clientDetails" required placeholder="Expliquez brièvement ce que vous souhaitez..."></textarea>
+
 </div>
+
 </div>
 
 <p class="form-note">Les informations saisies ne sont pas enregistrées sur ce site. Elles sont intégrées au message WhatsApp que vous choisissez d'envoyer.</p>
+
 <button class="btn btn-primary" type="submit">Envoyer ma demande sur WhatsApp</button>
+
 </form>
+
 </div>
+
 </section>
 
 <section id="faq">
+
 <div class="container">
+
 <div class="section-heading">
+
 <span class="kicker">Besoin de précisions ?</span>
+
 <h2>Questions fréquentes</h2>
+
 <p>Quelques réponses avant de nous contacter.</p>
+
 </div>
 
 <div class="faq-list">
+
 <details>
+
 <summary>Comment commander un service ?</summary>
+
 <p>Choisissez un service et cliquez sur Commander, ou remplissez le formulaire de devis. WhatsApp s'ouvrira avec votre demande préparée.</p>
+
 </details>
+
 <details>
+
 <summary>Les tarifs affichés sont-ils définitifs ?</summary>
+
 <p>Les tarifs affichés correspondent aux offres présentées. Pour une demande particulière ou un travail supplémentaire, contactez-nous afin de préciser le besoin avant de commencer.</p>
+
 </details>
+
 <details>
+
 <summary>Comment transmettre mes informations ou mes images ?</summary>
+
 <p>Après le premier échange sur WhatsApp, nous pourrons vous indiquer les éléments nécessaires à la réalisation de votre demande.</p>
+
 </details>
+
 <details>
+
 <summary>Le formulaire enregistre-t-il mes données ?</summary>
+
 <p>Non. Ce formulaire prépare un message WhatsApp. Il ne stocke pas vos informations dans une base de données.</p>
+
 </details>
+
 </div>
+
 </div>
+
 </section>
 
 <section class="contact-section" id="contact">
+
 <div class="container">
+
 <div class="section-heading">
+
 <span class="kicker">Restons en contact</span>
+
 <h2>Contactez DIOM SERVICE</h2>
+
 <p>Vous avez une question ou un projet ? Échangeons directement.</p>
+
 </div>
 
 <div class="contact-box">
+
 <div class="contact-details">
+
 <p><strong>WhatsApp :</strong> <a href="https://wa.me/2250564369543">05 64 36 95 43</a></p>
+
 <p><strong>Email :</strong> <a href="mailto:abdoulayediomande243@gmail.com">abdoulayediomande243@gmail.com</a></p>
+
 </div>
+
 <a class="btn btn-primary" href="https://wa.me/2250564369543?text=Bonjour%20DIOM%20SERVICE%2C%20je%20souhaite%20avoir%20des%20informations%20sur%20vos%20services.">Nous contacter sur WhatsApp</a>
+
 </div>
+
 </div>
+
 </section>
 
 </main>
 
 <footer>
+
 <div class="container">
+
 <strong>DIOM SERVICE</strong>
+
 <p>Créer • Innover • Réussir</p>
+
 <div class="footer-links">
+
 <a href="#accueil">Accueil</a>
+
 <a href="#services">Services</a>
+
 <a href="#realisations">Réalisations</a>
+
 <a href="#contact">Contact</a>
+
 </div>
+
 <p>© <span id="year"></span> Diom Service - Tous droits réservés</p>
+
 </div>
+
 </footer>
 
 <a class="whatsapp-float" href="https://wa.me/2250564369543">WhatsApp</a>
 
 <script>
+
 const WHATSAPP_NUMBER = "2250564369543";
 
 const menuToggle = document.getElementById("menuToggle");
+
 const navLinks = document.getElementById("navLinks");
 
 menuToggle.addEventListener("click", () => {
+
 const isOpen = navLinks.classList.toggle("open");
+
 menuToggle.setAttribute("aria-expanded", String(isOpen));
+
 menuToggle.textContent = isOpen ? "✕" : "☰";
+
 });
 
 navLinks.querySelectorAll("a").forEach(link => {
+
 link.addEventListener("click", () => {
+
 navLinks.classList.remove("open");
+
 menuToggle.setAttribute("aria-expanded", "false");
+
 menuToggle.textContent = "☰";
+
 });
+
 });
 
 document.querySelectorAll(".order-link").forEach(link => {
+
 const service = link.dataset.service;
+
 const message = `Bonjour DIOM SERVICE, je souhaite commander le service : ${service}. Pouvez-vous m'expliquer la suite ?`;
+
 link.href = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+
 link.target = "_blank";
+
 link.rel = "noopener";
+
 });
 
 document.getElementById("quoteForm").addEventListener("submit", event => {
+
 event.preventDefault();
 
 const name = document.getElementById("clientName").value.trim();
+
 const phone = document.getElementById("clientPhone").value.trim();
+
 const service = document.getElementById("clientService").value;
+
 const details = document.getElementById("clientDetails").value.trim();
 
 if (!name || !service || !details) {
+
 alert("Merci de remplir les champs obligatoires.");
+
 return;
+
 }
 
 const message = [
+
 "Bonjour DIOM SERVICE, je souhaite demander un devis.",
+
 "",
+
 `Nom : ${name}`,
+
 `Téléphone : ${phone || "Non renseigné"}`,
+
 `Service : ${service}`,
+
 `Description : ${details}`
+
 ].join("\n");
 
 window.open(
+
 `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`,
+
 "_blank"
+
 );
+
 });
 
 document.getElementById("year").textContent = new Date().getFullYear();
+
 </script>
 
 </body>
+
 </html>
