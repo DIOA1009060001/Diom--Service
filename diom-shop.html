@@ -1,0 +1,752 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#101010">
+<meta name="description" content="DIOM SHOP - Boutique électronique : smartphones, ordinateurs et accessoires.">
+<title>DIOM SHOP | Technologie & Accessoires</title>
+
+<style>
+:root{
+  --black:#101010;
+  --dark:#181818;
+  --gold:#d6ad55;
+  --gold-light:#f1d58e;
+  --white:#ffffff;
+  --gray:#a5a5a5;
+  --border:#303030;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:Arial,Helvetica,sans-serif;
+  background:var(--black);
+  color:var(--white);
+}
+button,input{font:inherit}
+button{cursor:pointer}
+a{text-decoration:none;color:inherit}
+
+/* HEADER */
+header{
+  background:#111;
+  border-bottom:1px solid var(--border);
+  position:sticky;
+  top:0;
+  z-index:100;
+}
+.navbar{
+  max-width:1200px;
+  margin:auto;
+  padding:17px 20px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:15px;
+}
+.logo{
+  color:var(--gold);
+  font-size:25px;
+  font-weight:900;
+  letter-spacing:1px;
+}
+.logo span{color:white}
+.nav-links{
+  display:flex;
+  gap:25px;
+  align-items:center;
+}
+.nav-links a{font-size:14px;color:#ddd}
+.nav-links a:hover{color:var(--gold)}
+.cart-button{
+  border:1px solid var(--gold);
+  color:var(--gold);
+  background:transparent;
+  padding:11px 16px;
+  border-radius:7px;
+}
+.cart-button:hover{background:var(--gold);color:#111}
+#cart-count{
+  background:var(--gold);
+  color:#111;
+  border-radius:50%;
+  padding:3px 7px;
+  font-weight:bold;
+  margin-left:5px;
+}
+
+/* HERO */
+.hero{
+  min-height:420px;
+  padding:75px 20px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  background:
+  linear-gradient(90deg,rgba(0,0,0,.88),rgba(0,0,0,.65)),
+  url("https://images.unsplash.com/photo-1498049794561-7780e7231661?auto=format&fit=crop&w=1800&q=85") center/cover;
+}
+.hero-content{max-width:750px}
+.hero-label{
+  color:var(--gold);
+  font-size:13px;
+  letter-spacing:4px;
+  font-weight:bold;
+}
+.hero h1{
+  font-size:clamp(36px,7vw,65px);
+  margin:20px 0;
+}
+.hero h1 span{color:var(--gold)}
+.hero p{
+  color:#ddd;
+  line-height:1.8;
+  font-size:16px;
+}
+.gold-button{
+  display:inline-block;
+  background:var(--gold);
+  color:#111;
+  padding:15px 25px;
+  border-radius:6px;
+  font-weight:bold;
+  margin-top:25px;
+  border:none;
+}
+.gold-button:hover{background:var(--gold-light)}
+
+/* ADVANTAGES */
+.advantages{
+  max-width:1100px;
+  margin:35px auto;
+  padding:0 20px;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:15px;
+}
+.advantage{
+  text-align:center;
+  padding:20px 10px;
+  background:var(--dark);
+  border:1px solid var(--border);
+  border-radius:10px;
+}
+.advantage .emoji{font-size:27px}
+.advantage h3{color:var(--gold);font-size:14px;margin:10px 0}
+.advantage p{color:var(--gray);font-size:12px}
+
+/* PRODUCTS */
+.container{
+  max-width:1200px;
+  margin:65px auto;
+  padding:0 20px;
+}
+.section-heading{text-align:center;margin-bottom:30px}
+.section-heading small{
+  color:var(--gold);
+  letter-spacing:3px;
+  font-weight:bold;
+}
+.section-heading h2{font-size:32px;margin:12px 0}
+.section-heading p{color:var(--gray);font-size:14px}
+
+.tools{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:space-between;
+  gap:12px;
+  margin-bottom:25px;
+}
+.search-box{
+  flex:1;
+  min-width:220px;
+}
+.search-box input{
+  width:100%;
+  background:var(--dark);
+  border:1px solid var(--border);
+  padding:14px;
+  color:white;
+  border-radius:7px;
+  outline:none;
+}
+.search-box input:focus{border-color:var(--gold)}
+.filters{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+}
+.filter-btn{
+  padding:11px 15px;
+  background:var(--dark);
+  color:white;
+  border:1px solid var(--border);
+  border-radius:6px;
+  font-size:12px;
+}
+.filter-btn.active,.filter-btn:hover{
+  background:var(--gold);
+  color:#111;
+  border-color:var(--gold);
+}
+.product-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:20px;
+}
+.product{
+  background:var(--dark);
+  border:1px solid var(--border);
+  border-radius:11px;
+  overflow:hidden;
+  transition:.3s;
+}
+.product:hover{
+  transform:translateY(-5px);
+  border-color:var(--gold);
+}
+.product img{
+  width:100%;
+  height:190px;
+  object-fit:cover;
+  background:#222;
+}
+.product-info{padding:16px}
+.category{
+  font-size:11px;
+  color:var(--gold);
+  text-transform:uppercase;
+  letter-spacing:1px;
+}
+.product h3{font-size:16px;margin:9px 0}
+.description{
+  font-size:12px;
+  color:var(--gray);
+  min-height:32px;
+  line-height:1.5;
+}
+.price{
+  color:var(--gold);
+  font-size:19px;
+  font-weight:bold;
+  margin:13px 0;
+}
+.add-btn{
+  width:100%;
+  padding:12px;
+  background:var(--gold);
+  color:#111;
+  border:0;
+  border-radius:6px;
+  font-weight:bold;
+}
+.add-btn:hover{background:var(--gold-light)}
+.empty{
+  grid-column:1/-1;
+  text-align:center;
+  color:var(--gray);
+  padding:40px;
+}
+
+/* CART */
+.cart-section{
+  background:var(--dark);
+  border:1px solid var(--border);
+  border-radius:12px;
+  padding:25px;
+  margin-top:50px;
+}
+.cart-section h2{color:var(--gold);margin-bottom:20px}
+.cart-item{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:10px;
+  padding:14px 0;
+  border-bottom:1px solid var(--border);
+}
+.cart-item strong{font-size:14px}
+.cart-item small{display:block;color:var(--gray);margin-top:5px}
+.cart-actions{display:flex;align-items:center;gap:8px}
+.cart-actions button{
+  padding:5px 10px;
+  border:1px solid var(--gold);
+  color:var(--gold);
+  background:transparent;
+  border-radius:4px;
+}
+.remove-btn{color:#ff7777!important;border-color:#ff7777!important}
+.cart-total{
+  text-align:right;
+  margin-top:20px;
+  font-size:21px;
+  font-weight:bold;
+}
+.cart-total span{color:var(--gold)}
+.whatsapp-btn{
+  display:block;
+  text-align:center;
+  width:100%;
+  background:#20b85a;
+  color:white;
+  padding:15px;
+  border-radius:7px;
+  font-weight:bold;
+  margin-top:20px;
+  border:none;
+}
+.clear-btn{
+  background:transparent;
+  border:1px solid #777;
+  color:#ddd;
+  padding:10px 15px;
+  border-radius:5px;
+  margin-top:12px;
+}
+
+/* ABOUT */
+.about{
+  background:#171717;
+  padding:60px 20px;
+  text-align:center;
+  border-top:1px solid var(--border);
+  border-bottom:1px solid var(--border);
+}
+.about h2{font-size:30px;margin-bottom:15px}
+.about h2 span{color:var(--gold)}
+.about p{
+  max-width:650px;
+  margin:auto;
+  line-height:1.8;
+  color:#bbb;
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:30px 20px;
+  color:#999;
+  font-size:13px;
+}
+footer strong{color:var(--gold)}
+footer a{color:var(--gold)}
+
+@media(max-width:900px){
+  .product-grid{grid-template-columns:repeat(3,1fr)}
+}
+@media(max-width:650px){
+  .navbar{flex-wrap:wrap}
+  .nav-links{display:none}
+  .hero{min-height:370px}
+  .advantages{grid-template-columns:1fr}
+  .product-grid{grid-template-columns:repeat(2,1fr);gap:12px}
+  .product img{height:145px}
+  .product-info{padding:11px}
+  .product h3{font-size:14px}
+  .price{font-size:16px}
+  .section-heading h2{font-size:25px}
+}
+@media(max-width:360px){
+  .product-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <nav class="navbar">
+    <a href="#" class="logo">DIOM <span>SHOP.</span></a>
+
+    <div class="nav-links">
+      <a href="#accueil">Accueil</a>
+      <a href="#produits">Produits</a>
+      <a href="#apropos">À propos</a>
+    </div>
+
+    <button class="cart-button" onclick="document.getElementById('panier').scrollIntoView({behavior:'smooth'})">
+      🛒 Panier <span id="cart-count">0</span>
+    </button>
+  </nav>
+</header>
+
+<section class="hero" id="accueil">
+  <div class="hero-content">
+    <div class="hero-label">TECHNOLOGIE • QUALITÉ • INNOVATION</div>
+    <h1>Bienvenue chez <span>DIOM SHOP</span></h1>
+    <p>
+      Découvrez notre sélection de smartphones, ordinateurs
+      et accessoires électroniques. La technologie à portée de main.
+    </p>
+    <a href="#produits" class="gold-button">DÉCOUVRIR NOS PRODUITS →</a>
+  </div>
+</section>
+
+<section class="advantages">
+  <div class="advantage">
+    <div class="emoji">📱</div>
+    <h3>Large choix</h3>
+    <p>Des produits pour tous vos besoins.</p>
+  </div>
+  <div class="advantage">
+    <div class="emoji">💰</div>
+    <h3>Prix attractifs</h3>
+    <p>Des prix accessibles en FCFA.</p>
+  </div>
+  <div class="advantage">
+    <div class="emoji">💬</div>
+    <h3>Commande facile</h3>
+    <p>Contactez-nous directement sur WhatsApp.</p>
+  </div>
+</section>
+
+<main class="container" id="produits">
+
+  <div class="section-heading">
+    <small>NOTRE BOUTIQUE</small>
+    <h2>Nos produits</h2>
+    <p>Explorez notre catalogue électronique.</p>
+  </div>
+
+  <div class="tools">
+    <div class="search-box">
+      <input type="search" id="search" placeholder="🔎 Rechercher un produit..." oninput="renderProducts()">
+    </div>
+
+    <div class="filters">
+      <button class="filter-btn active" onclick="setCategory('Tous',this)">Tout</button>
+      <button class="filter-btn" onclick="setCategory('Téléphones',this)">Téléphones</button>
+      <button class="filter-btn" onclick="setCategory('Ordinateurs',this)">Ordinateurs</button>
+      <button class="filter-btn" onclick="setCategory('Accessoires',this)">Accessoires</button>
+      <button class="filter-btn" onclick="setCategory('Audio',this)">Audio</button>
+    </div>
+  </div>
+
+  <div class="product-grid" id="product-grid"></div>
+
+  <section class="cart-section" id="panier">
+    <h2>🛒 Mon panier</h2>
+    <div id="cart-items">
+      <p style="color:#aaa">Votre panier est vide.</p>
+    </div>
+    <div class="cart-total">
+      Total : <span id="total">0 FCFA</span>
+    </div>
+    <button class="whatsapp-btn" onclick="checkout()">
+      Commander mon panier sur WhatsApp
+    </button>
+    <button class="clear-btn" onclick="clearCart()">Vider le panier</button>
+  </section>
+
+</main>
+
+<section class="about" id="apropos">
+  <h2>À propos de <span>DIOM SHOP</span></h2>
+  <p>
+    DIOM SHOP est un projet de boutique électronique en ligne.
+    Notre objectif est de proposer une expérience d'achat simple,
+    moderne et accessible à tous.
+    <br><br>
+    Une réalisation signée <strong style="color:#d6ad55">DIOM SERVICE</strong>,
+    votre partenaire en solutions numériques.
+  </p>
+</section>
+
+<footer>
+  <p>© 2026 <strong>DIOM SHOP</strong> - Tous droits réservés.</p>
+  <p style="margin-top:10px">
+    Site réalisé par <a href="#apropos">DIOM SERVICE</a>
+  </p>
+</footer>
+
+<script>
+
+/* CONFIGURATION */
+const WHATSAPP_NUMBER = "2250700000000";
+// Remplace ce numéro par ton vrai numéro WhatsApp.
+// Format : indicatif du pays + numéro, sans espace.
+
+/* PRODUITS DE DÉMONSTRATION */
+const products = [
+  {
+    id:1,
+    name:"iPhone 13",
+    category:"Téléphones",
+    price:250000,
+    description:"Smartphone Apple élégant et performant.",
+    image:"https://images.unsplash.com/photo-1592750475338-74b7b21085ab?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    id:2,
+    name:"Samsung Galaxy",
+    category:"Téléphones",
+    price:180000,
+    description:"Smartphone moderne et polyvalent.",
+    image:"https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    id:3,
+    name:"MacBook Air",
+    category:"Ordinateurs",
+    price:450000,
+    description:"Ordinateur portable pour travailler.",
+    image:"https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    id:4,
+    name:"Casque Bluetooth",
+    category:"Audio",
+    price:25000,
+    description:"Casque sans fil confortable.",
+    image:"https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    id:5,
+    name:"Écouteurs sans fil",
+    category:"Audio",
+    price:15000,
+    description:"Écouteurs pratiques et élégants.",
+    image:"https://images.unsplash.com/photo-1606220945770-b5b6c2c55bf1?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    id:6,
+    name:"Montre connectée",
+    category:"Accessoires",
+    price:30000,
+    description:"Suivez votre activité au quotidien.",
+    image:"https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    id:7,
+    name:"Tablette numérique",
+    category:"Accessoires",
+    price:120000,
+    description:"Idéale pour les études et le travail.",
+    image:"https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    id:8,
+    name:"Clavier mécanique",
+    category:"Accessoires",
+    price:20000,
+    description:"Clavier pour une meilleure expérience.",
+    image:"https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    id:9,
+    name:"Souris sans fil",
+    category:"Accessoires",
+    price:10000,
+    description:"Souris ergonomique et pratique.",
+    image:"https://images.unsplash.com/photo-1527814050087-3793815479db?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    id:10,
+    name:"Enceinte Bluetooth",
+    category:"Audio",
+    price:18000,
+    description:"Profitez de votre musique partout.",
+    image:"https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    id:11,
+    name:"Chargeur rapide",
+    category:"Accessoires",
+    price:8000,
+    description:"Chargeur pour vos appareils compatibles.",
+    image:"https://images.unsplash.com/photo-1583863788434-e58a36330cf0?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    id:12,
+    name:"PC portable HP",
+    category:"Ordinateurs",
+    price:280000,
+    description:"Ordinateur adapté aux activités quotidiennes.",
+    image:"https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=600&q=80"
+  }
+];
+
+let cart = [];
+let currentCategory = "Tous";
+
+const formatPrice = price =>
+  price.toLocaleString("fr-FR") + " FCFA";
+
+/* AFFICHER LES PRODUITS */
+function renderProducts(){
+
+  const grid = document.getElementById("product-grid");
+  const search = document.getElementById("search").value.toLowerCase();
+
+  const filtered = products.filter(product => {
+
+    const matchesCategory =
+      currentCategory === "Tous" ||
+      product.category === currentCategory;
+
+    const matchesSearch =
+      product.name.toLowerCase().includes(search) ||
+      product.category.toLowerCase().includes(search);
+
+    return matchesCategory && matchesSearch;
+  });
+
+  if(filtered.length === 0){
+    grid.innerHTML = '<div class="empty">Aucun produit trouvé.</div>';
+    return;
+  }
+
+  grid.innerHTML = filtered.map(product => `
+    <article class="product">
+      <img src="${product.image}"
+           alt="${product.name}"
+           loading="lazy"
+           onerror="this.src='https://placehold.co/600x400/202020/d6ad55?text=DIOM+SHOP'">
+
+      <div class="product-info">
+        <div class="category">${product.category}</div>
+        <h3>${product.name}</h3>
+        <p class="description">${product.description}</p>
+        <div class="price">${formatPrice(product.price)}</div>
+        <button class="add-btn" onclick="addToCart(${product.id})">
+          + Ajouter au panier
+        </button>
+      </div>
+    </article>
+  `).join("");
+}
+
+/* FILTRES */
+function setCategory(category,button){
+  currentCategory = category;
+
+  document.querySelectorAll(".filter-btn").forEach(btn=>{
+    btn.classList.remove("active");
+  });
+
+  button.classList.add("active");
+  renderProducts();
+}
+
+/* AJOUT AU PANIER */
+function addToCart(id){
+
+  const product = products.find(p=>p.id===id);
+  const existing = cart.find(item=>item.id===id);
+
+  if(existing){
+    existing.quantity++;
+  }else{
+    cart.push({...product,quantity:1});
+  }
+
+  renderCart();
+}
+
+/* MODIFICATION QUANTITÉ */
+function changeQuantity(id,amount){
+
+  const item = cart.find(p=>p.id===id);
+  if(!item)return;
+
+  item.quantity += amount;
+
+  if(item.quantity <= 0){
+    cart = cart.filter(p=>p.id!==id);
+  }
+
+  renderCart();
+}
+
+/* SUPPRIMER UN ARTICLE */
+function removeItem(id){
+  cart = cart.filter(item=>item.id!==id);
+  renderCart();
+}
+
+/* AFFICHER LE PANIER */
+function renderCart(){
+
+  const container = document.getElementById("cart-items");
+
+  if(cart.length===0){
+    container.innerHTML =
+      '<p style="color:#aaa">Votre panier est vide.</p>';
+  }else{
+
+    container.innerHTML = cart.map(item=>`
+      <div class="cart-item">
+        <div>
+          <strong>${item.name}</strong>
+          <small>${formatPrice(item.price)} × ${item.quantity}</small>
+        </div>
+
+        <div class="cart-actions">
+          <button onclick="changeQuantity(${item.id},-1)">−</button>
+          <strong>${item.quantity}</strong>
+          <button onclick="changeQuantity(${item.id},1)">+</button>
+          <button class="remove-btn" onclick="removeItem(${item.id})">×</button>
+        </div>
+      </div>
+    `).join("");
+  }
+
+  const total = cart.reduce(
+    (sum,item)=>sum+item.price*item.quantity,0
+  );
+
+  const count = cart.reduce(
+    (sum,item)=>sum+item.quantity,0
+  );
+
+  document.getElementById("total").textContent = formatPrice(total);
+  document.getElementById("cart-count").textContent = count;
+}
+
+/* VIDER LE PANIER */
+function clearCart(){
+  cart=[];
+  renderCart();
+}
+
+/* COMMANDER SUR WHATSAPP */
+function checkout(){
+
+  if(cart.length===0){
+    alert("Votre panier est vide. Ajoutez des produits avant de commander.");
+    return;
+  }
+
+  const total = cart.reduce(
+    (sum,item)=>sum+item.price*item.quantity,0
+  );
+
+  let message = "Bonjour DIOM SHOP ! Je souhaite commander :\n\n";
+
+  cart.forEach(item=>{
+    message +=
+      "• "+item.name+
+      " x "+item.quantity+
+      " = "+formatPrice(item.price*item.quantity)+"\n";
+  });
+
+  message += "\nTOTAL : "+formatPrice(total);
+  message += "\n\nMerci de me confirmer la disponibilité.";
+
+  const url =
+    "https://wa.me/"+WHATSAPP_NUMBER+
+    "?text="+encodeURIComponent(message);
+
+  window.open(url,"_blank");
+}
+
+/* INITIALISATION */
+renderProducts();
+renderCart();
+
+</script>
+</body>
+</html>
