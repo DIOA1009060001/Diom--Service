@@ -22,21 +22,11 @@
 
 <style>
 
-:root {
+:root{
 
-  --navy:#071b3b;
+--navy:#071b3b;--blue:#0759a6;--cyan:#16c5df;
 
-  --blue:#0759a6;
-
-  --cyan:#16c5df;
-
-  --ink:#17233b;
-
-  --muted:#617089;
-
-  --bg:#f4f7fb;
-
-  --line:#e5ebf3;
+--ink:#17233b;--muted:#617089;--bg:#f4f7fb;--line:#e5ebf3
 
 }
 
@@ -52,23 +42,9 @@ img{max-width:100%;display:block}
 
 .container{width:min(1120px,92%);margin:auto}
 
-.site-header{
+.site-header{position:sticky;top:0;z-index:1000;background:rgba(7,27,59,.97);color:white;box-shadow:0 5px 22px #071b3b20}
 
-position:sticky;top:0;z-index:1000;
-
-background:rgba(7,27,59,.97);color:white;
-
-box-shadow:0 5px 22px #071b3b20
-
-}
-
-.header-inner{
-
-min-height:76px;display:flex;align-items:center;
-
-justify-content:space-between;gap:20px
-
-}
+.header-inner{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}
 
 .brand{display:flex;align-items:center;gap:11px;text-decoration:none;font-weight:800}
 
@@ -86,13 +62,7 @@ justify-content:space-between;gap:20px
 
 .menu-toggle{display:none;background:transparent;color:white;border:1px solid #ffffff55;border-radius:9px;padding:9px 12px;font-size:22px}
 
-.hero{
-
-background:linear-gradient(125deg,#071b3b,#0759a6 65%,#087fc0);
-
-color:white;text-align:center;padding:88px 20px 92px
-
-}
+.hero{background:linear-gradient(125deg,#071b3b,#0759a6 65%,#087fc0);color:white;text-align:center;padding:88px 20px 92px}
 
 .hero-content{max-width:780px;margin:auto}
 
@@ -130,15 +100,7 @@ section{padding:76px 0}
 
 .services-grid,.portfolio-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
 
-.service-card{
-
-background:white;padding:25px;border:1px solid var(--line);
-
-border-radius:18px;display:flex;flex-direction:column;min-height:245px;
-
-box-shadow:0 5px 20px #071b3b08
-
-}
+.service-card{background:white;padding:25px;border:1px solid var(--line);border-radius:18px;display:flex;flex-direction:column;min-height:245px;box-shadow:0 5px 20px #071b3b08}
 
 .service-icon{width:48px;height:48px;border-radius:13px;background:#e8f6fb;display:grid;place-items:center;font-size:23px;margin-bottom:16px}
 
@@ -154,25 +116,11 @@ box-shadow:0 5px 20px #071b3b08
 
 .portfolio-section{background:#eaf2fb}
 
-.portfolio-card{background:white;border-radius:18px;padding:14px}
+.portfolio-card{background:white;border-radius:18px;padding:14px;display:flex;flex-direction:column}
 
-.portfolio-card img,.demo-visual{
+.portfolio-card img,.demo-visual{width:100%;height:220px;object-fit:contain;background:#edf3fa;border-radius:12px;margin-bottom:14px}
 
-width:100%;height:220px;object-fit:contain;
-
-background:#edf3fa;border-radius:12px;margin-bottom:14px
-
-}
-
-.demo-visual{
-
-display:flex;align-items:center;justify-content:center;
-
-text-align:center;padding:20px;color:white;
-
-background:linear-gradient(135deg,#071b3b,#087fc0)
-
-}
+.demo-visual{display:flex;align-items:center;justify-content:center;text-align:center;padding:20px;color:white;background:linear-gradient(135deg,#071b3b,#087fc0)}
 
 .demo-visual strong{font-size:27px;display:block;margin-bottom:10px}
 
@@ -184,39 +132,13 @@ background:linear-gradient(135deg,#071b3b,#087fc0)
 
 .notice{text-align:center;color:var(--muted);font-size:13px;margin-top:22px}
 
-/* Bouton de découverte des projets */
+.project-tag{display:inline-block;background:#e4f7ec;color:#168b49;padding:5px 10px;border-radius:20px;font-size:11px;font-weight:bold;margin:8px 0;align-self:flex-start}
 
-.project-link{
+.project-link{display:block;text-align:center;background:var(--blue);color:white;padding:12px;border-radius:9px;text-decoration:none;font-weight:bold;margin-top:auto}
 
-display:block;text-align:center;
+.project-link:hover{background:#087fc0}
 
-background:var(--blue);color:white;
-
-padding:12px;border-radius:9px;
-
-text-decoration:none;font-weight:bold;
-
-margin-top:15px;
-
-transition:background .2s,transform .2s
-
-}
-
-.project-link:hover{background:#087fc0;transform:translateY(-2px)}
-
-.project-tag{
-
-display:inline-block;background:#e4f7ec;
-
-color:#168b49;padding:5px 10px;
-
-border-radius:20px;font-size:11px;
-
-font-weight:bold;margin:8px 0
-
-}
-
-.project-description{min-height:90px}
+.portfolio-card .service-bottom{margin-top:auto}
 
 .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:center}
 
@@ -254,13 +176,7 @@ font-weight:bold;margin:8px 0
 
 label{font-size:13px;font-weight:bold}
 
-input,select,textarea{
-
-width:100%;padding:13px 14px;border:1px solid #d8e1ec;
-
-border-radius:9px;font:inherit;color:var(--ink);background:white
-
-}
+input,select,textarea{width:100%;padding:13px 14px;border:1px solid #d8e1ec;border-radius:9px;font:inherit;color:var(--ink);background:white}
 
 textarea{min-height:110px;resize:vertical}
 
@@ -296,15 +212,7 @@ footer p{margin:5px 0;font-size:14px}
 
 .footer-links a{color:#dce7f5;text-decoration:none;font-size:13px}
 
-.whatsapp-float{
-
-position:fixed;right:18px;bottom:18px;z-index:900;
-
-background:#19b968;color:white;text-decoration:none;
-
-font-weight:bold;padding:13px 17px;border-radius:50px
-
-}
+.whatsapp-float{position:fixed;right:18px;bottom:18px;z-index:900;background:#19b968;color:white;text-decoration:none;font-weight:bold;padding:13px 17px;border-radius:50px}
 
 @media(max-width:850px){
 
@@ -312,15 +220,7 @@ font-weight:bold;padding:13px 17px;border-radius:50px
 
 .header-inner{min-height:70px}
 
-.nav-links{
-
-display:none;position:absolute;left:0;right:0;top:70px;
-
-background:#071b3b;padding:18px 5% 22px;
-
-flex-direction:column;align-items:stretch;gap:0
-
-}
+.nav-links{display:none;position:absolute;left:0;right:0;top:70px;background:#071b3b;padding:18px 5% 22px;flex-direction:column;align-items:stretch;gap:0}
 
 .nav-links.open{display:flex}
 
@@ -614,13 +514,35 @@ section{padding:57px 0}
 
 </article>
 
+<!-- NOUVEAU VISUEL RESEAUX SOCIAUX -->
+
 <article class="portfolio-card">
 
-<div class="demo-visual"><div><strong>VOTRE MARQUE</strong><span>Des visuels qui attirent l'attention</span></div></div>
+<img
 
-<h3>Visuels réseaux sociaux</h3>
+src="visuel-reseaux-sociaux-diom-service..PNG"
 
-<p>Exemple de visuel promotionnel pour les réseaux sociaux.</p>
+alt="Visuel publicitaire professionnel réalisé par DIOM SERVICE"
+
+loading="lazy"
+
+style="height:280px;object-fit:contain;background:#edf3fa;border-radius:12px;margin-bottom:14px"
+
+>
+
+<span class="project-tag">✓ EXEMPLE DE RÉALISATION</span>
+
+<h3>Création de visuels réseaux sociaux</h3>
+
+<p>Conception de visuels publicitaires modernes et attractifs pour promouvoir les activités des commerçants et entrepreneurs sur WhatsApp, Facebook, Instagram et TikTok.</p>
+
+<div class="service-bottom">
+
+<span class="price">1 500 FCFA</span>
+
+<a class="small-link order-link" data-service="Visuel réseaux sociaux" href="#">Commander →</a>
+
+</div>
 
 </article>
 
@@ -644,7 +566,7 @@ section{padding:57px 0}
 
 </article>
 
-<!-- NOUVELLE REALISATION : SAMAKE COMMANDES -->
+<!-- REALISATION SAMAKE COMMANDES -->
 
 <article class="portfolio-card">
 
@@ -664,7 +586,7 @@ section{padding:57px 0}
 
 <h3>SAMAKE COMMANDES</h3>
 
-<p class="project-description">
+<p>
 
 Application web de commande conçue pour la Boulangerie SAMAKE.
 
@@ -680,17 +602,13 @@ la date et l'heure de la commande.
 
 href="https://dioa1009060001.github.io/BOULANGERIE--SAMAKE/"
 
-target="_blank"
-
-rel="noopener noreferrer">
+target="_blank" rel="noopener noreferrer">
 
 🚀 Découvrir l'application →
 
 </a>
 
 </article>
-
-<!-- FIN NOUVELLE REALISATION -->
 
 </div>
 
