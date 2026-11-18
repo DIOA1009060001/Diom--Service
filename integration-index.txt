@@ -1,0 +1,23 @@
+À AJOUTER DANS index.html
+
+1) Dans <head>, juste avant </head>, ajoute :
+
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#071b3b">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="DIOM SERVICE">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+2) Juste avant </body>, après le script actuel, ajoute :
+
+<script>
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("./service-worker.js")
+      .catch(error => console.error("Service Worker non enregistré :", error));
+  });
+}
+</script>
+
+Ne remplace pas tout le contenu de index.html : ajoute seulement ces lignes aux emplacements indiqués.
